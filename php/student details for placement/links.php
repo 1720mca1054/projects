@@ -46,9 +46,7 @@ $emailid=$_SESSION['emailid'];
                <button type="submit value="Submit" name="save" class="waves-effect waves-light btn done">
                <i class="material-icons left">save</i> Save
                </button>
-               <button ng-disabled="form-register.$invalid" type="button" class="waves-effect waves-light btn done" onclick="location.href='youtube.php'">
-               <i class="material-icons left">next</i> Next
-               </button>
+               
                
                <?php
                 
@@ -61,8 +59,10 @@ $emailid=$_SESSION['emailid'];
                 $str="update students set linkedin='$linkedin',twitter='$twitter',github='$github' where email='$emailid'";
                
                 $result=mysqli_query($con,$str);
-                if($result==1)
+                if($result==1){
                 echo "Successful";
+              header("Location: youtube.php");
+            }
                 else
                 echo "Failed";
               }

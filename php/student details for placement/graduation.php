@@ -31,18 +31,18 @@ $emailid=$_SESSION['emailid'];
            <form method="POST" action="graduation.php">
            	 <div class="input-field col s6">
               <input name="graduation" type="text">
-              <label for="graduation">Graduation Cource</label>
+              <label for="graduation">Graduation Course</label>
             </div>
 		   <div class="input-field col s6">
-              <input name="graduation1" type="text" >
+              <input name="graduation1" type="number" >
               <label for="graduation1">Graduation Percentage</label>
              </div>
 			   <div class="input-field col s6">
-              <input name="intermediate" type="text" >
+              <input name="intermediate" type="number" >
               <label for="intermediate">12th Percentage</label>
             </div> 
             <div class="input-field col s6">
-              <input name="highschool" type="text">
+              <input name="highschool" type="number">
               <label for="highschool">10th Percentage</label>
             </div>
        
@@ -52,9 +52,7 @@ $emailid=$_SESSION['emailid'];
                  <button type="submit value="Submit" name="save" class="waves-effect waves-light btn done">
                <i class="material-icons left">save</i> Save
                </button>
-               <button ng-disabled="form-register.$invalid" type="button" class="waves-effect waves-light btn done" onclick="location.href='discription.php'">
-               <i class="material-icons left">next</i> Next
-               </button>
+               
                
               </div>
              </form>
@@ -72,7 +70,10 @@ $emailid=$_SESSION['emailid'];
                
                 $result=mysqli_query($con,$str);
                 if($result==1)
+                {
                 echo "Successful";
+                header("Location: description.php");
+              }
                 else
                 echo "Failed";
               }

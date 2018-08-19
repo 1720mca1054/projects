@@ -23,20 +23,21 @@
    <div id="signup">
       <div class="signup-screen">
          <div class="space-bot text-center">
-            <h1>Personal Info</h1>
+            <h1>Basic Info</h1>
            <div class="divider"></div>
          </div>
-           <form class="form-register" method="POST" name="register" novalidate action="student_form.php" enctype="multipart/form-data">
+           <form class="form-register" method="POST" name="register" novalidate action="index.php" enctype="multipart/form-data">
            	 <div class="input-field col s6">
-              <input name="name" type="text" class="validate" required>
+              <input id="name" name="name" type="text" class="validate" required>
               <label for="name">Name</label>
             </div>
 		   <div class="input-field col s6">
-              <input name="email" type="email" class="validate" required>
+              <input id="email" name="email" type="email"  ng-model="email" class="validate" required>
               <label for="email">Email</label>
              </div>
+             <p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
 			   <div class="input-field col s6">
-              <input name="year" type="text" class="validate" required>
+              <input id="year" name="year" type="text" class="validate" required>
               <label for="first-name">Passing Year</label>
             </div> 
 
@@ -50,9 +51,7 @@
                <button type="submit value="Submit" name="save" class="waves-effect waves-light btn done">
                <i class="material-icons left">save</i> Save
                </button>
-               <button ng-disabled="form-register.$invalid" type="button" class="waves-effect waves-light btn done" onclick="location.href='links.php'">
-               <i class="material-icons left">next</i> Next
-               </button>
+              
                
               </div>
              </form>
@@ -89,7 +88,7 @@ move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file);
 								{
 								echo "Successful";
 								$_SESSION['emailid']=$email;
-
+                header("Location: links.php");
 								
 
 

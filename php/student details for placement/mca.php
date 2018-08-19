@@ -30,23 +30,23 @@ $emailid=$_SESSION['emailid'];
          </div>
            <form class="form-register" method="POST" name="register" novalidate action="mca.php">
            	 <div class="input-field col s6">
-              <input name="semester1" type="text">
+              <input name="semester1" type="number" >
               <label for="semester1">Semester 1</label>
-            </div>
+             </div>
 		   <div class="input-field col s6">
-              <input name="semester2" type="email" >
+              <input name="semester2" type="number" >
               <label for="semester2">Semester 2</label>
              </div>
 			   <div class="input-field col s6">
-              <input name="semester3" type="text" >
+              <input name="semester3" type="number" >
               <label for="semester3">Semester 3</label>
             </div> 
             <div class="input-field col s6">
-              <input name="semester4" type="text">
+              <input name="semester4" type="number">
               <label for="semester4">Semester 4</label>
             </div>
        <div class="input-field col s6">
-              <input name="semester5" type="email" >
+              <input name="semester5" type="number" >
               <label for="semester5">Semester 5</label>
              </div>
          
@@ -55,9 +55,7 @@ $emailid=$_SESSION['emailid'];
                <button type="submit value="Submit" name="save" class="waves-effect waves-light btn done">
                <i class="material-icons left">save</i> Save
                </button>
-               <button ng-disabled="form-register.$invalid" type="button" class="waves-effect waves-light btn done" onclick="location.href='graduation.php'">
-               <i class="material-icons left">next</i> Next
-               </button>
+               
                
               </div>
              </form>
@@ -75,8 +73,10 @@ $emailid=$_SESSION['emailid'];
                 $str="insert into students_marks(email,semester1,semester2,semester3,semester4,semester5) values('$emailid','$sem1','$sem2','$sem3','$sem4','$sem5')";
                
                 $result=mysqli_query($con,$str);
-                if($result==1)
+                if($result==1){
                 echo "Successful";
+                header("Location: graduation.php");
+              }
                 else
                 echo "Failed";
               }

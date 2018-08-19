@@ -26,24 +26,29 @@ $emailid=$_SESSION['emailid'];
    <div id="signup">
       <div class="signup-screen">
          <div class="space-bot text-center">
-            <h1>Project Discription</h1>
+            <h1>Project Description</h1>
            <div class="divider"></div>
          </div>
-           <form method="POST" action="discription.php">
-           	 <div class="input-field col s6">
-              <textarea rows="4" cols="50" name="discription" type="text">
- 
-              </textarea>
+         <div class="input-field col s6">
+              <input name="category" type="text">
+              <label for="category">Project Category</label>
             </div>
-		   
-         
-			
-              <div class="space-top text-center">
+           <form method="POST" action="description.php">
+            <div class="input-field col s6">
+              <input name="back" type="text">
+              <label for="back">Back End</label>
+            </div>
+            <div class="input-field col s6">
+              <input name="front" type="text">
+              <label for="front">Front End</label>
+            </div>
+            <div class="input-field col s6">
+              <input name="description" type="text">
+              <label for="description">Project Description</label>
+            </div>
+          <div class="space-top text-center">
              <button type="submit value="Submit" name="save" class="waves-effect waves-light btn done">
                <i class="material-icons left">save</i> Save
-               </button>
-               <button ng-disabled="form-register.$invalid" class="waves-effect waves-light btn done" onclick="location.href='done.php'">
-               <i class="material-icons left">next</i> Next
                </button>
                
               </div>
@@ -52,15 +57,20 @@ $emailid=$_SESSION['emailid'];
                 
               if(isset($_POST["save"]))
               {
-                $discription=$_POST["discription"];     
+                $description=$_POST["description"];
+                $front=$_POST["front"];
+                $back=$_POST["back"];     
                 
                 
                 $con=mysqli_connect("localhost","root","","aug2018");
-                $str="insert into discription(email,discription) values('$emailid','$discription')";
+                $str="insert into students_project(email,project_summary,back_end,front_end) values('$emailid','$description','$back','$front')";
                
                 $result=mysqli_query($con,$str);
                 if($result==1)
+                {
                 echo "Successful";
+                header("Location: done.html");
+              }
                 else
                 echo "Failed";
               }
