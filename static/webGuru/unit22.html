@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<img style="float:left;"src="ic_launcher.jpg">
+<p><font size="25"><b>KIET GROUP OF INSTITUTIONS</b></font>
+</br>
+(A Technical Campus Approved By AICTE
+Affiliated To Dr.A.P.J Abdul Kalam Technical University ,Lucknow)</br>
+Accredited By NAAC With Grade'A'</br>
+"Shaping Young Minds With Skill Oriented & Value Based Education"</p>
+</p>
+
+   <h2>DEPARTMENT OF COMPUTER APPLICATIONS</h2>
+
+</header>
+
+
+<nav>
+
+  <ul>
+ <a href="#"> <button class="accordion">SYLLABUS</button></a>
+  <div class="panel">
+
+</div>
+	 <a href="unit1.html"> <button class="accordion">UNIT 1</button></a>
+<div class="panel">
+
+</div>
+
+ <a href="unit2.html"> <button class="accordion">UNIT 2</button></a>
+<div class="panel">
+
+
+</div>
+
+ <a href="unit3.html"> <button class="accordion">UNIT 3</button></a>
+<div class="panel">
+
+</div>
+ <a href="new.css"> <button class="accordion">UNIT 4</button></a>
+<div class="panel">
+
+
+</div>
+ <a href="new.css"> <button class="accordion">UNIT 5</button></a>
+<div class="panel">
+
+
+</div>
+ <a href="new.css"> <button class="accordion">ASSIGNMENTS</button></a>
+<div class="panel">
+
+</div>
+ <a href="new.css"> <button class="accordion">TUTORIALS</button></a>
+<div class="panel">
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+
+  </ul>
+</nav>
+
+<article>
+
+<ul>
+<li>
+<a href="#Home">HOME</a>
+</li>
+<li>
+<a href="aim2.html">DISCRETE MATHEMATICS</a>
+</li>
+<li>
+<a href="education2.html">COMPUTER ORGANISATION</a>
+</li>
+<li>
+<a href="hobby2.html">C  PROGRAMMING</a>
+</li>
+
+<li>
+<a href="personalskills.html">PROFESSIONAL COMMUNICATION</a>
+</li>
+<li>
+<a href="technical.html">A F M</a>
+</li>
+</ul >
+ <p><h1 style="text-align:center;"><b><u>Lattices</u></b></h1>
+<b>14.1 INTRODUCTION</b><br>
+Order and precedence relationships appear in many different places in mathematics and computer science.<br>
+This chapter makes these notions precise.We also define a lattice, which is a special kind of an ordered set.<br><br>
+<b>14.2 ORDERED SETS</b>
+Suppose R is a relation on a set S satisfying the following three properties:<br>
+[O1] (Reflexive) For any a ? S, we have aRa.<br>
+[O2] (Antisymmetric) If aRb and bRa, then a = b.<br>
+[O3] (Transitive) If aRb and bRc, then aRc.<br>
+Then R is called a partial order or, simply an order relation, and R is said to define a partial ordering of S. The
+set S with the partial order is called a partially ordered set or, simply, an ordered set or poset. We write (S,R)
+when we want to specify the relation R.<br><br>
+The most familiar order relation, called the usual order, is the relation = (read “less than or equal”) on the
+positive integers N or, more generally, on any subset of the real numbers R. For this reason, a partial order relation
+is usually denoted by ; and
+a b<br>
+is read “a precedes b.” In this case we also write:<br>
+a ? b means a b and a = b; read “a strictly precedes b.”<br>
+ba means a b; read “b succeeds a.”<br>
+b . a means a ? b; read “b strictly succeeds a.”<br>
+/, / ?, /, and . are self-explanatory.<br>
+When there is no ambiguity, the symbols =, <, >, and = are frequently used instead of , ?, ., and ,
+respectively.<br><br>
+<b>EXAMPLE 14.1</b><br>
+(a) Let S be any collection of sets. The relation ? of set inclusion is a partial ordering of S. Specifically, A ? A
+for any set A; if A ? B and B ? A then A = B; and if A ? B and B ? C then A ? C.<br>
+(b) Consider the set N of positive integers. We say “a divides b,” written a | b, if there exists an integer c such
+that ac = b. For example, 2 | 4, 3 | 12, 7 | 21, and so on. This relation of divisibility is a partial ordering of N.<br>
+(c) The relation “|” of divisibility is not an ordering of the set Z of integers. Specifically, the relation is not
+antisymmetric. For instance, 2|-2 and -2 | 2, but 2 = -2.<br>
+(d) Consider the set Z of integers. Define aRb if there is a positive integer r such that b = ar . For instance, 2 R 8
+since 8 = 23. Then R is a partial ordering of Z.<br><br>
+<b>Dual Order</b><br>
+Let be any partial ordering of a set S. The relation , that is, a succeeds b, is also a partial ordering of S;
+it is called the dual order. Observe that a b if and only if ba; hence the dual order  is the inverse of the
+relation , that is,  =-1.<br><br>
+<b>Ordered Subsets</b><br>
+Let A be a subset of an ordered set S, and suppose a, b ? A. Define a b as elements of A whenever a b as
+elements of S. This defines a partial ordering of A called the induced order on A. The subset A with the induced
+order is called an ordered subset of S. Unless otherwise stated or implied, any subset of an ordered set S will be
+treated as an ordered subset of S.<br><br>
+<b>Quasi-order</b><br>
+Suppose ? is a relation on a set S satisfying the following two properties:<br>
+[Q1] (Irreflexive) For any a ? A, we have a / ? a.<br>
+[Q2] (Transitive) If a ? b, and b ? c, then a ? c.<br>
+Then ? is called a quasi-order on S.<br>
+There is a close relationship between partial orders and quasi-orders. Specifically, if  is a partial order
+on a set S and we define a ? b to mean a b but a = b, then ? is a quasi-order on S. Conversely, if ? is a
+quasi-order on a set S and we define a b to mean a ? b or a = b, then  is a partial order on S. This allows
+us to switch back and forth between a partial order and its corresponding quasi-orders using whichever is more
+convenient.<br><br>
+<b>Comparability, Linearly Ordered Sets</b><br>
+Suppose a and b are elements in a partially ordered set S.We say a and b are comparable if<br>
+a b or ba<br>
+that is, if one of them precedes the other. Thus a and b are noncomparable, written<br>
+a b<br>
+if neither a b nor ba.<br><br>
+The word “partial” is used in defining a partially ordered set S since some of the elements of S need not be
+comparable. Suppose, on the other hand, that every pair of elements of S are comparable. Then S is said to be
+totally ordered or linearly ordered, and S is called a chain. Although an ordered set S may not be linearly ordered,
+it is still possible for a subset A of S to be linearly ordered. Clearly, every subset of a linearly ordered set S must
+also be linearly ordered.<br><br>
+<b>EXAMPLE 14.2</b><br>
+(a) Consider the set N of positive integers ordered by divisibility. Then 21 and 7 are comparable since 7 | 21.
+On the other hand, 3 and 5 are noncomparable since neither 3 | 5 nor 5 | 3. Thus N is not linearly ordered by
+divisibility. Observe that A = {2, 6, 12, 36} is a linearly ordered subset of N since 2 | 6, 6 | 12 and 12 | 36.<br>
+(b) The set N of positive integers with the usual order = (less than or equal) is linearly ordered and hence every
+ordered subset of N is also linearly ordered.<br>
+(c) The power set P(A) of a set A with two or more elements is not linearly ordered by set inclusion. For
+instance, suppose a and b belong to A. Then {a} and {b} are noncomparable. Observe that the empty set ,
+{a}, and A do form a linearly ordered subset of P(A) since  ? {a} ? A. Similarly, , {b}, and A form a
+linearly ordered subset of P(A).<br><br>
+<b>Product Sets and Order</b>
+There are a number of ways to define an order relation on the Cartesian product of given ordered sets. Two
+of these ways follow:<br>
+<u>(a) Product Order:</u> Suppose S and T are ordered sets. Then the following is an order relation on the product
+set S × T , called the product order:<br>
+(a, b)(a
+
+, b
+
+) if a = a
+	 and b = b
+
+<br><u>(b) Lexicographical Order:</u> Suppose S and T are linearly ordered sets. Then the following is an order relation
+on the product set S × T , called the lexicographical or dictionary order:
+(a, b) ? (a
+
+, b
+
+) if a < b or if a = a
+	 and b < b
+
+This order can be extended to S1 × S2 ×· · ·×Sn as follows:<br>
+(a1, a2, . . . , an) ? (a
+
+1, a
+
+2, . . . , a
+
+n) if ai = a
+
+i for i = 1, 2, . . . , k - 1 and ak < a
+
+k<br>
+Note that the lexicographical order is also linear.
+<br><br>
+<b>14.3 HASSE DIAGRAMS OF PARTIALLY ORDERED SETS</b><br>
+Let S be a partially ordered set, and suppose a, b belong to S.We say that a is an immediate predecessor of
+b, or that b is an immediate successor of a, or that b is a cover of a, written<br>
+a / b<br>
+if a < b but no element in S lies between a and b, that is, there exists no element c in S such that a < c < b.<br><br>
+Suppose S is a finite partially ordered set. Then the order on S is completely known once we know all pairs
+a, b in S such that a / b, that is, once we know the relation / on S. This follows from the fact that x < y if
+and only if x / y or there exist elements a1, a2, . . . , am in S such that<br>
+x / a1 / a2 /· · ·/am / y<br><br>
+The Hasse diagram of a finite partially ordered set S is the directed graph whose vertices are the elements
+of S and there is a directed edge from a to b whenever a / b in S. (Instead of drawing an arrow from a to b,
+we sometimes place b higher than a and draw a line between them. It is then understood that movement upwards
+indicates succession.) In the diagram thus created, there is a directed edge from vertex x to vertex y if and only
+if x / y. Also, there can be no (directed) cycles in the diagram of S since the order relation is antisymmetric.<br>
+The Hasse diagram of a poset S is a picture of S; hence it is very useful in describing types of elements
+in S. Sometimes we define a partially ordered set by simply presenting its Hasse diagram.We note that the Hasse
+diagram of a poset S need not be connected.<br><br>
+<b>Remark:</b> The Hasse diagram of a finite poset S turns out to be a directed cycle-free graph (DAG) studied in
+Section 9.9. The investigation here is independent of the previous investigation. Here we mainly think of order
+in terms of “less than” or “greater than” rather than in terms of directed adjacency relations. Accordingly, there
+will be some overlap in the content.<br><br>
+<b>EXAMPLE 14.3</b><br>
+(a) Let A = {1, 2, 3, 4, 6, 8, 9, 12, 18, 24} be ordered by the relation “x divides y.” The diagram of A is given
+in Fig. 14-1(a). (Unlike rooted trees, the direction of a line in the diagram of a poset is always upward.)<br>
+(b) Let B = {a, b, c, d, e}. The diagram in Fig. 14-1(b) defines a partial order on B in the natural way. That is,
+d = b, d = a, e = c and so on.<br>
+(c) The diagram of a finite linearly ordered set, i.e., a finite chain, consists simply of one path. For example,
+Fig. 14-1(c) shows the diagram of a chain with five elements.<br><img src="14.1.png" alt="img" style="width:750px;height:300px;"><br>
+<b>EXAMPLE 14.4</b> A partition of a positive integer m is a set of positive integers whose sum is m. For instance,
+there are seven partitions of m = 5 as follows:<br>
+5, 3 - 2, 2 - 2 - 1, 1 - 1 - 1 - 1 - 1, 4 - 1, 3 - 1 - 1, 2 - 1 - 1 - 1<br>
+We order the partitions of an integer m as follows.Apartition P1 precedes a partition P2 if the integers in P1 can
+be added to obtain the integers in P2 or, equivalently, if the integers in P2 can be further subdivided to obtain the
+integers in P1. For example,<br>
+2 - 2 - 1 precedes 3 - 2<br>
+since 2 + 1 = 3. On the other hand, 3 - 1 - 1 and 2 - 2 - 1 are noncomparable.<br>
+Figure 14-2 gives the Hasse diagram of the partitions of m = 5.<br><img src="14.2.png" alt="img" style="width:750px;height:300px;"><br>
+<b>Minimal and Maximal, and First and Last Elements</b><br>
+Let S be a partially ordered set.An element a in S is called a minimal element if no other element of S strictly
+precedes (is less than) a. Similarly, an element b in S is called a maximal element if no element of S strictly
+succeeds (is larger than) b. Geometrically speaking, a is a minimal element if no edge enters a (from below),
+and b is a maximal element if no edge leaves b (in the upward direction).We note that S can have more than one
+minimal and more than one maximal element.<br>
+If S is infinite, then S may have no minimal and no maximal element. For instance, the set Z of integers with
+the usual order = has no minimal and no maximal element. On the other hand, if S is finite, then S must have at
+least one minimal element and at least one maximal element.<br>
+An element a is S is called a first element if for every element x in S,<br>
+a x<br>
+that is, if a precedes every other element in S. Similarly, an element b in S is called a last element if for every
+element y in S,<br>
+y b<br>
+that is, if b succeeds every other element in S. We note that S can have at most one first element, which must
+be a minimal element, and S can have at most one last element, which must be a maximal element. Generally
+speaking, S may have neither a first nor a last element, even when S is finite.<br><br>
+<b>EXAMPLE 14.5</b><br>
+(a) Consider the three partially ordered sets in Example 14-3 whose Hasse diagrams appear in Fig. 14-1.<br>
+<nbsp>(i) A has two maximal elements 18 and 24 and neither is a last element. A has only one minimal element, 1,
+which is also a first element.<br>
+<nbsp>(ii) B has two minimal elements, d and e, and neither is a first element. B has only one maximal element, a,
+which is also a last element.<br>
+<nbsp>(iii) The chain has one minimal element, x, which is a first element, and one maximal element, v, which is
+a last element.<br><br>
+(b) Let A be any nonempty set and let P(A) be the power set of A ordered by set inclusion. Then the empty set
+ is a first element of P(A) since, for any set X, we have  ? X. Moreover, A is a last element of P(A)
+since every element Y of P(A) is, by definition, a subset of A, that is, Y ? A.<br><br>
+<b>14.5 SUPREMUM AND INFIMUM</b><br>
+Let A be a subset of a partially ordered set S. An element M in S is called an upper bound of A if M succeeds
+every element of A, i.e., if, for every x in A,<br>
+If an upper bound of A precedes every other upper bound of A, then it is called the supremum of A and is
+denoted by<br>
+sup(A)<br>
+We also write sup(a1,...,an) instead of sup(A) if A consists of the elements a1,...,an. We emphasize that
+there can be at most one sup(A); however, sup(A) may not exist.<br>
+Analogously, an element m in a poset S is called a lower bound of a subset A of S if m precedes every
+element of A, i.e., if, for every y in A,<br>
+If a lower bound of A succeeds every other lower bound of A, then it is called the infimum of A and is denoted by
+inf(A), or inf(a1,...,an)<br><br>
+if A consists of the elements a1,...,an. There can be at most one inf(A) although inf(A) may not exist.
+Some texts use the term least upper bound instead of supremum and then write lub(A) instead of sup(A),
+and use the term greatest lower bound instead of infimum and write glb(A) instead of inf(A).
+If A has an upper bound we say A is bounded above, and if A has a lower bound we say A is bounded below.
+In particular, A is bounded if A has an upper and lower bound.<br><br>
+<b>14.8 LATTICES</b><br>
+There are two ways to define a lattice L. One way is to define L in terms of a partially ordered set. Specifically,
+a lattice L may be defined as a partially ordered set in which inf (a, b) and sup(a, b) exist for any pair of elements
+a, b ? L. Another way is to define a lattice L axiomatically. This we do below.<br><br>
+<b>Axioms Defining a Lattice</b><br>
+Let L be a nonempty set closed under two binary operations called meet and join, denoted respectively by
+? and ?. Then L is called lattice if the following axioms hold where a, b, c are elements in L:<br>
+<b>[L1] Commutative law:</b><br>
+(1a) a ? b = b ?a (1b) a ? b = b ? a<br>
+<b>[L2] Associative law:</b><br>
+(2a) (a ? b) ? c = a ? (b ? c) (2b) (a ? b) ? c = a ? (b ? c)<br>
+<b>[L3] Absorption law:</b><br>
+(3a) a ? (a ? b) =a (3b) a ? (a ? b) = a<br>
+We will sometimes denote the lattice by (L,?,?) when we want to show which operations are involved.<br><br>
+<b>Duality and the Idempotent Law</b><br>
+The dual of any statement in a lattice (L,?,?) is defined to be the statement that is obtained by interchanging
+? and ?. For example, the dual of<br>
+a ? (b ? a) = a ? a is a ? (b ? a) = a ? a<br>
+Notice that the dual of each axiom of a lattice is also an axiom. Accordingly, the principle of duality holds;
+that is:<br><br>
+<b>Theorem 14.2 (Principle of Duality):</b> The dual of any theorem in a lattice is also a theorem.<br>
+This follows from the fact that the dual theorem can be proven by using the dual of each step of the proof of
+the original theorem.<br>
+An important property of lattices follows directly from the absorption laws.<br><br>
+<b>Theorem 14.3 (Idempotent Law):</b> (i) a ? a = a; (ii) a ? a = a.<br>
+The proof of (i) requires only two lines:<br>
+a ? a = a ? (a ? (a ? b)) (using (3b))<br>
+=a (using (3a))<br>
+The proof of (ii) follows from the above principle of duality (or can be proved in a similar manner).<br><br>
+<b>Lattices and Order</b><br>
+Given a lattice L, we can define a partial order on L as follows:<br>
+a b if a ? b = a<br>
+Analogously, we could define<br>
+a b if a ? b = b<br>
+We state these results in a theorem.<br><br>
+<b>Theorem 14.4:</b> Let L be a lattice. Then:<br>
+(i) a ? b = a if and only if a ? b = b.<br>
+(ii) The relation a b (defined by a ? b = a or a ? b = b) is a partial order on L.<br>
+Now that we have a partial order on any lattice L, we can picture L by a diagram as was done for partially
+ordered sets in general.<br><br>
+<b>EXAMPLE 14.10</b> Let C be a collection of sets closed under intersection and union. Then (C,n,?) is a lattice.
+In this lattice, the partial order relation is the same as the set inclusion relation. Figure 14-6 shows the diagram
+of the lattice L of all subsets of {a, b, c}.<br>
+<img src="14.6.png" alt="img" style="width:750px;height:300px;"><br>
+
+We have shown how to define a partial order on a lattice L. The next theorem tells us when we can define a
+lattice on a partially ordered set P such that the lattice will give back the original order on P.<br><br>
+
+<b>Theorem 14.5:</b> Let P be a poset such that the inf (a, b) and sup(a, b) exist for any a, b in P. Letting
+a ? b = inf (a, b) and a ? b = sup(a, b)<br>
+we have that (P,?,?) is a lattice. Furthermore, the partial order on P induced by the lattice is
+the same as the original partial order on P.<br><br>
+The converse of the above theorem is also true. That is, let L be a lattice and let  be the induced partial order
+on L. Then inf (a, b) and sup(a, b) exist for any pair a, b in L and the lattice obtained from the poset (L, ) is
+the original lattice. Accordingly, we have the following:<br><br>
+<b>Alternate Definition:</b> A lattice is a partially ordered set in which<br>
+a ? b = inf (a, b) and a ? b = sup(a, b)<br>
+exist for any pair of elements a and b.<br>
+We note first that any linearly ordered set is a lattice since inf (a, b) = a and sup(a, b) = b whenever<br>
+a b. By Example 14.7, the positive integers N and the set Dm of divisors of m are lattices under the relation of
+divisibility.<br><br>
+<b>Sublattices, Isomorphic Lattices</b><br>
+Suppose M is a nonempty subset of a lattice L. We say M is a sublattice of L if M itself is a lattice (with
+respect to the operations of L).We note thatM is a sublattice of L if and only ifM is closed under the operations of
+? and ? of L. For example, the set Dm of divisors of m is a sublattice of the positive integers N under divisibility.<br><br>
+Two lattices L and L
+	 are said to be isomorphic if there is a one-to-one correspondence f: L ? L
+	 such that<br>
+f (a ? b) = f (a) ? f (b) and f (a ? b) = f (a) ? f (b)<br>
+for any elements a, b in L.<br><br>
+<b>14.9 BOUNDED LATTICES</b><br>
+A lattice L is said to have a lower bound 0 if for any element x in L we have 0x. Analogously, L is said
+to have an upper bound I if for any x in L we have x I . We say L is bounded if L has both a lower bound 0
+and an upper bound I . In such a lattice we have the identities<br>
+a ? I = I, a ? I = a, a ? 0 = a, a ? 0 = 0<br>
+for any element a in L.<br>
+The nonnegative integers with the usual ordering,<br>
+0 < 1 < 2 < 3 < 4 < · · ·<br>
+have 0 as a lower bound but have no upper bound. On the other hand, the lattice P(U) of all subsets of any
+universal set U is a bounded lattice with U as an upper bound and the empty set  as a lower bound.<br>
+Suppose L = {a1, a2, . . . , an} is a finite lattice. Then<br>
+a1 ? a2 ? · · · ? an and a1 ? a2 ? · · · ? an<br>
+are upper and lower bounds for L, respectively. Thus we have<br><br>
+<b>Theorem 14.6:</b> Every finite lattice L is bounded.<br><br>
+
+<b>14.10 DISTRIBUTIVE LATTICES</b><br>
+A lattice L is said to be distributive if for any elements a, b, c in L we have the following:<br>
+[L4] Distributive law:<br><br>
+(4a) a ? (b ? c) = (a ? b) ? (a ? c) (4b) a ? (b ? c) = (a ? b) ? (a ? c)<br>
+Otherwise, L is said to be nondistributive.We note that by the principle of duality the condition (4a) holds if and
+only if (4b) holds.<br>
+Figure 14-7(a) is a nondistributive lattice since<br>
+a ? (b ? c) = a ? 0 = a but (a ? b) ? (a ? c) = I ? c = c<br>
+Figure 14-7(b) is also a nondistributive lattice. In fact, we have the following characterization of such lattices.
+<br><img src="14.7.png" alt="img" style="width:750px;height:300px;"><br>
+Theorem 14.7: Alattice L is nondistributive if and only if it contains a sublattice isomorphic to Fig. 14-7(a) or
+to Fig. 14.7(b).<br>
+The proof of this theorem lies beyond the scope of this text.<br><br>
+<b>Join Irreducible Elements, Atoms</b><br>
+Let L be a lattice with a lower bound 0. An element a in L is said to be join irreducible if a = x ? y implies
+a = x or a = y. (Prime numbers under multiplication have this property, i.e., if p = ab then p = a or p = b
+where p is prime.) Clearly 0 is join irreducible. If a has at least two immediate predecessors, say, b1 and b2 as in
+Fig. 14-8(a), then a = b1 ? b2, and so a is not join irreducible. On the other hand, if a has a unique immediate
+predecessor c, then a = sup(b1, b2) = b1 ? b2 for any other elements b1 and b2 because c would lie between the
+b’s and a as in Fig. 14-8(b). In other words, a = 0, is join irreducible if and only if a has a unique immediate
+predecessor. Those elements which immediately succeed 0, called atoms, are join irreducible. However, lattices
+can have other join irreducible elements. For example, the element c in Fig. 14-7(a) is not an atom but is join
+irreducible since a is its only immediate predecessor.
+<br><img src="14.8.png" alt="img" style="width:750px;height:300px;"><br>
+If an element a in a finite lattice L is not join irreducible, then we can write a = b1 ? b2. Then we can write
+b1 and b2 as the join of other elements if they are not join irreducible; and so on. Since L is finite we finally have<br>
+a = d1 ? d2 ? · · · ? dn<br>
+where the d’s are join irreducible. If di precedes dj then di ?dj = dj ; so we can delete the di from the expression.
+In other words, we can assume that the d’s are irredundant, i.e., no d precedes any other d. We emphasize that
+such an expression need not be unique, e.g., I = a ? b and I = b ? c in both lattices in Fig. 14-7.We now state
+the main theorem of this section (proved in Problem 14.28.)<br><br>
+<b>Theorem 14.8:</b> Let L be a finite distributive lattice. Then every a in L can be written uniquely (except for order)
+as the join of irredundant join irreducible elements.<br>
+Actually this theorem can be generalized to lattices with finite length, i.e., where all linearly ordered subsets
+are finite. (Problem 14.30 gives an infinite lattice with finite length.)<br><br>
+<b>14.11 COMPLEMENTS, COMPLEMENTED LATTICES</b><br>
+Let L be a bounded lattice with lower bound 0 and upper bound I . Let a be an element of L. An element x
+in L is called a complement of a if<br>
+a ? x = I and a ? x = 0<br>
+Complements need not exist and need not be unique. For example, the elements a and c are both complements
+of b in Fig. 14-7(a). Also, the elements y, z, and u in the chain in Fig. 14-1 have no complements. We have the
+following result.<br><br>
+<b>Theorem 14.9:</b> Let L be a bounded distributive lattice. Then complements are unique if they exist.<br>
+<b>Proof:</b> Suppose x and y are complements of any element a in L. Then<br>
+<img src="b.png" alt="img" style="width:750px;height:300px;">
+<br><br>
+<b>Complemented Lattices</b>
+AlatticeLis said to be complemented ifLis bounded and every element inLhas a complement. Figure 14-7(b)
+shows a complemented lattice where complements are not unique. On the other hand, the latticeP(U) of all subsets
+of a universal set U is complemented, and each subset A of U has the unique complement Ac = U\A.<br><br>
+<b>Theorem 14.10:</b> Let L be a complemented lattice with unique complements. Then the join irreducible elements
+of L, other than 0, are its atoms.<br><br>
+Combining this theorem and Theorems 14.8 and 14.9, we get an important result.<br><br>
+<b>Theorem 14.11:</b> Let L be a finite complemented distributive lattice. Then every element a in L is the join of a
+unique set of atoms.<br><br>
+<b>Remark:</b> Sometexts define a latticeLto be complemented if each a inLhas a unique complement.Theorem 14.10
+is then stated differently.<br><br><br>
+</p>
+
+
+</article>
+
+<footer>Copyright &copy; kiet.edu</br>
+<a href="aboutus.html"target="_blank" style="color:white">Developers</a>: Neeraj Maurya,Archy Mathur,Ashi Anand( GROUP LEADER) & Paras Verma
+</footer>
+
+</div>
+
+</body>
+</html>

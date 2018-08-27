@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<img style="float:left;"src="ic_launcher.jpg">
+<p><font size="25"><b>KIET GROUP OF INSTITUTIONS</b></font>
+</br>
+(A Technical Campus Approved By AICTE
+Affiliated To Dr.A.P.J Abdul Kalam Technical University ,Lucknow)</br>
+Accredited By NAAC With Grade'A'</br>
+"Shaping Young Minds With Skill Oriented & Value Based Education"</p>
+</p>
+
+   <h2>DEPARTMENT OF COMPUTER APPLICATIONS</h2>
+   
+</header>
+
+
+<nav>
+
+  <ul>
+ <a href="#"> <button class="accordion">SYLLABUS</button></a>
+  <div class="panel">
+  
+</div>
+	 <a href="unit1.html"> <button class="accordion">UNIT 1</button></a>
+<div class="panel">
+  
+</div>
+
+ <a href="unit22.html"> <button class="accordion">UNIT 2</button></a>
+<div class="panel">
+  
+ 
+</div>
+
+ <a href="unit3.html"> <button class="accordion">UNIT 3</button></a>
+<div class="panel">
+
+</div>
+ <a href="new.css"> <button class="accordion">UNIT 4</button></a>
+<div class="panel">
+
+ 
+</div>
+ <a href="new.css"> <button class="accordion">UNIT 5</button></a>
+<div class="panel">
+
+ 
+</div>
+ <a href="new.css"> <button class="accordion">ASSIGNMENTS</button></a>
+<div class="panel">
+
+</div>
+ <a href="new.css"> <button class="accordion">TUTORIALS</button></a>
+<div class="panel">
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+
+  </ul>
+</nav>
+
+<article>
+
+<ul>
+<li>
+<a href="#Home">HOME</a>
+</li>
+<li>
+<a href="aim2.html">DISCRETE MATHEMATICS</a>
+</li>
+<li>
+<a href="education2.html">COMPUTER ORGANISATION</a>
+</li>
+<li>
+<a href="hobby2.html">C  PROGRAMMING</a>
+</li>
+
+<li>
+<a href="personalskills.html">PROFESSIONAL COMMUNICATION</a>
+</li>
+<li>
+<a href="technical.html">A F M</a>
+</li>
+</ul >
+<h1 style="text-align:center";><u>UNIT 3</u></h1>
+<h1 style="text-align:center";><u>BOOLEAN ALGEBRA</u></h1>
+ <p><b>15.1 INTRODUCTION</b><br>
+Both sets and propositions satisfy similar laws, which are listed in Tables 1-1 and 4-1 (in Chapters 1 and 4,
+respectively). These laws are used to define an abstract mathematical structure called a Boolean algebra, which
+is named after the mathematician George Boole (1815–1864).<br><br>
+<b>15.2 BASIC DEFINITIONS</b><br>
+Let B be a nonempty set with two binary operations + and *, a unary operation 	, and two distinct elements
+0 and 1. Then B is called a Boolean algebra if the following axioms hold where a, b, c are any elements in B:<br><br>
+[B1] Commutative laws:<br>
+(1a) a + b = b + a <br>(1b) a * b = b * a<br>
+[B2] Distributive laws:<br>
+(2a) a + (b * c) = (a + b) * (a + c) <br>(2b) a * (b + c) = (a * b) + (a * c)<br>
+[B3] Identity laws:<br>
+(3a) a + 0 = a <br>(3b) a * 1 = a<br>
+[B4] Complement laws:<br>
+(4a) a + a=1 <br>(4b) a * a= 0<br><br>
+We will sometimes designate a Boolean algebra by (B,+, *,', 0, 1*) when we want to emphasize its six parts.
+We say 0 is the zero element, l, is the unit element, and a is the complement of a.We will usually drop the symbol
+* and use  juxtaposition instead. Then (2b) is written a(b + c) = ab + ac which is the familiar algebraic identity
+of rings and fields. However, (2a) becomes a + bc = (a + b)(a + c), which is certainly not a usual identity
+in algebra.<br><br>
+The operations +, *, and ' are called sum, product, and complement, respectively. We adopt the usual
+convention that, unless we are guided by parentheses, 	 has precedence over *, and * has precedence over +.<br>
+For example,
+a + b * c means a + (b * c) and not (a + b) * c; a * b
+	 means a * (b') and not (a * b)'<br><br>
+	
+Of course when a + b * c is written a + bc then the meaning is clear.<br><br>
+<b>Subalgebras, Isomorphic Boolean Algebras</b><br>
+Suppose C is a nonempty subset of a Boolean algebra B. We say C is a subalgebra of B if C itself is a
+Boolean algebra (with respect to the operations of B). We note that C is a subalgebra of B if and only if C is
+closed under the three operations of B, i.e., +, *, and 	. For example, {1, 2, 35, 70} is a subalgebra of D70 in
+Example 15.1(c).<br>
+Two Boolean algebras B and B are said to be isomorphic if there is a one-to-one correspondence f: B ? B<br>
+	
+which preserves the three operations, i.e., such that, for any elements, a, b in B,<br>
+f (a + b) = f (a) + f (b), f(a * b) = f (a) * f (b) and f (a') = f (a)'<br><br>
+	
+<b>15.3 DUALITY</b><br>
+The dual of any statement in a Boolean algebra B is the statement obtained by interchanging the operations
++ and *, and interchanging their identity elements 0 and 1 in the original statement. For example, the dual of<br>
+(1 + a) * (b + 0) = b is (0 * a) + (b * 1) = b<br>
+Observe the symmetry in the axioms of a Boolean algebra B. That is, the dual of the set of axioms of B is the
+same as the original set of axioms. Accordingly, the important principle of duality holds in B. Namely,<br><br>
+<b>Theorem 15.1 (Principle of Duality):</b> The dual of any theorem in a Boolean algebra is also a theorem.<br>
+In other words, if any statement is a consequence of the axioms of a Boolean algebra, then the dual is also a
+consequence of those axioms since the dual statement can be proven by using the dual of each step of the proof
+of the original statement.<br><br>
+
+<b>15.4 BASIC THEOREMS</b><br>
+Using the axioms [B1] through [B4], we prove (Problem 15.5) the following theorem.<br><br>
+<b>Theorem 15.2:</b> Let a, b, c be any elements in a Boolean algebra B.<br>
+(i) Idempotent laws:<br>
+(5a) a + a =a <br>(5b) a * a = a<br>
+(ii) Boundedness laws:<br>
+(6a) a + 1 = 1 <br>(6b) a * 0 = 0<br>
+(iii) Absorption laws:<br>
+(7a) a + (a * b) =a<br> (7b) a * (a + b) = a<br>
+(iv) Associative laws:<br>
+(8a) (a + b) + c = a + (b + c) <br>(8b) (a * b) * c = a * (b * c)<br><br>
+Theorem 15.2 and our axioms still do not contain all the properties of sets listed in Table 1-1. The next
+two theorems give us the remaining properties.<br><br>
+<b>Theorem 15.3:</b> Let a be any element of a Boolean algebra B.<br>
+(i) (Uniqueness of Complement) If a + x = 1 and a * x = 0, then x = a	.
+(ii) (Involution law) (a')' = a.
+(iii) (9a) 0' = 1. (9b) 1' = 0.<br><br>
+<b>Theorem 15.4 (DeMorgan’s laws):</b> (10a) (a + b)'= a'* b"<br>(10b) (a * b)'= a'*b'<br>
+We prove these theorems in Problems 15.6 and 15.7.<br><br>
+<b>15.10 LOGIC GATES AND CIRCUITS</b><br>
+Logic circuits (also called logic networks) are structures which are built up from certain elementary circuits
+called logic gates. Each logic circuit may be viewed as a machine L which contains one or more input devices
+and exactly one output device. Each input device in L sends a signal, specifically, a bit (binary digit),<br>
+0 or 1<br>
+to the circuit L, and L processes the set of bits to yield an output bit. Accordingly, an n-bit sequence may be
+assigned to each input device, and L processes the input sequences one bit at a time to produce an n-bit output
+sequence. First we define the logic gates, and then we investigate the logic circuits.<br><br>
+<b>Logic Gates</b><br>
+There are three basic logic gates which are described below.We adopt the convention that the lines entering
+the gate symbol from the left are input lines and the single line on the right is the output line.<br>
+<b>(a) OR Gate:</b> Figure 15-8(a) shows an OR gate with inputs A and B and output Y = A + B where “addition”
+is defined by the “truth table” in Fig. 15-8(b). Thus the output Y = 0 only when inputs A = 0 and B = 0.
+Such an OR gate may, have more than two inputs. Figure 15-8(c) shows an OR gate with four inputs, A, B,
+C, D, and output Y = A + B + C + D. The output Y = 0 if and only if all the inputs are 0.<br><img src="15.8.png" alt="img" style="width:800px;height:300px;"><br>
+Suppose, for instance, the input data for the OR gate in Fig. 15-15(c) are the following 8-bit sequences:<br>
+A = 10000101, B= 10100001, C= 00100100, 10010101<br>
+The OR gate only yields 0 when all input bits are 0. This occurs only in the 2nd, 5th, and 7th positions
+(reading from left to right). Thus the output is the sequence Y = 10110101.<br><br>
+<b>(b) AND Gate:</b> Figure 15-9(a) shows an AND gate with inputs A and B and output Y = A · B (or simply
+Y = AB) where “multiplication” is defined by the “truth table” in Fig. 15-9(b). Thus the output Y = 1 when
+inputsA = 1 and B = 1; otherwise Y = 0. Such anANDgate may have more than two inputs. Figure 15-9(c)
+shows an AND gate with four inputs, A, B, C, D, and output Y = A · B · C · D. The output Y = 1 if and
+only if all the inputs are 1.<br>
+Suppose, for instance, the input data for theAND gate in Fig. 15-9(c) are the following 8-bit sequences:<br>
+A = 11100111, B= 01111011, C= 01110011, D= 11101110<br>
+The AND gate only yields 1 when all input bits are 1. This occurs only in the 2nd, 3rd, and 7th positions.
+Thus the output is the sequence Y = 01100010.<br><img src="15.9.png" alt="img" style="width:800px;height:300px;"><br>
+<b>(c) NOT Gate:</b> Figure 15-10(a) shows a NOT gate, also called an inverter, with input A and output Y = A
+	
+where “inversion,” denoted by the prime, is defined by the “truth table” in Fig. 15-10(b). The value of
+the output Y = A' is the opposite of the input A; that is, A'= 1 when A = 0 and A'= 0 when A = 1.
+We emphasize that aNOTgate can have only one input, whereas theORandANDgates may have two or more
+inputs.<br>
+<img src="15.10.png" alt="img" style="width:750px;height:300px;">
+<br>
+
+Suppose, for instance, a NOT gate is asked to process the following three sequences:<br>
+A1 = 110001, A2 = 10001111, A3 = 101100111000<br>
+The NOT gate changes 0 to 1 and 1 to 0. Thus<br>
+A1= 001110, A2= 01110000, A3= 010011000111<br>
+are the three corresponding outputs.<br><br>
+<b>Logic Circuits</b><br>
+A logic circuit L is a well-formed structure whose elementary components are the above OR, AND, and
+NOT gates. Figure 15-11 is an example of a logic circuit with inputs A, B, C and output Y . A dot indicates a
+place where the input line splits so that its bit signal is sent in more than one direction. (Frequently, for notational
+convenience, we may omit the word from the interior of the gate symbol.)Working from left to right, we express
+Y in terms of the inputs A, B, C as follows. The output of the AND gate is A · B, which is then negated to yield
+(A · B)'. The output of the lower OR gate is A'+ C, which is then negated to yield (A'+ C)'. The output of the
+OR gate on the right, with inputs (A · B)'and (A' + C)', gives us our desired representation, that is,<br>
+Y = (A · B)' + (A'+ C)<br><br>
+
+<img src="15.11.png" alt="img" style="width:750px;height:300px;">
+<br>
+<b>Logic Circuits as a Boolean Algebra</b><br>
+Observe that the truth tables for the OR, AND, and NOT gates are respectively identical to the truth tables
+for the propositions p ? q (disjunction, “p or q”), p ? q (conjunction, “p and q”), and ¬p (negation, “not p”),
+which appear in Section 4.3. The only difference is that 1 and 0 are used instead of T and F. Thus the logic circuits
+satisfy the same laws as do propositions and hence they form a Boolean algebra.We state this result formally.<br><br>
+<b>Theorem 15.12:</b> Logic circuits form a Boolean Algebra.<br>
+Accordingly, all terms used with Boolean algebras, such as, complements, literals, fundamental products,
+minterms, sum-of-products, and complete sum-of-products, may also be used with our logic circuits.<br><br>
+<b>AND-OR Circuits</b><br>
+The logic circuit L which corresponds to a Boolean sum-of-products expression is called anAND-OR circuit.
+Such a circuit L has several inputs, where:<br>
+(1) Some of the inputs or their complements are fed into each AND gate.<br>
+(2) The outputs of all the AND gates are fed into a single OR gate.<br>
+(3) The output of the OR gate is the output for the circuit L.<br>
+The following illustrates this type of a logic circuit.<br><br>
+<b>NAND and NOR Gates</b><br>
+There are two additional gates which are equivalent to combinations of the above basic gates.<br>
+(a) A NAND gate, pictured in Fig. 15-13(a), is equivalent to an AND gate followed by a NOT gate.<br>
+(b) A NOR gate, pictured in Fig. 15-13(b), is equivalent to an OR gate followed by a NOT gate.<br>
+The truth tables for these gates (using two inputs A and B) appear in Fig. 15-13(c). The NAND and NOR
+gates can actually have two or more inputs just like the corresponding AND and OR gates. Furthermore, the
+output of a NAND gate is 0 if and only if all the inputs are 1, and the output of a NOR gate is 1 if and only if
+all the inputs are 0.<br>               
+
+<img src="15.13.png" alt="img" style="width:750px;height:300px;">
+
+<br>
+Observe that the only difference between theAND and NAND gates between the OR and NOR gates is that
+the NAND and NOR gates are each followed by a circle. Some texts also use such a small circle to indicate a
+complement before a gate. For example, the Boolean expressions corresponding to two logic circuits in Fig. 15-14
+are as follows:<br>
+(a) Y = (A'B)', (b) Y = (A'+ B'+ C)'<br><br>
+	
+<br><img src="15.14.png" alt="img" style="width:750px;height:300px;"><br>
+
+<b>15.11 TRUTH TABLES, BOOLEAN FUNCTIONS</b><br>
+Consider a logic circuit L with n = 3 input devices A, B, C and output Y , say<br>
+Y = A · B · C + A · B
+	 · C + A
+	 · B<br>
+Each assignment of a set of three bits to the inputs A, B, C yields an output bit for Y . All together there are
+2n = 23 = 8 possible ways to assign bits to the inputs as follows:<br>
+000, 001, 010, 011, 100, 101, 110, 111<br>
+The assumption is that the sequence of first bits is assigned to A, the sequence of second bits to B, and the
+sequence of third bits to C. Thus the above set of inputs may be rewritten in the form<br>
+A = 00001111, B= 00110011, C= 01010101<br>
+We emphasize that these three 2n = 8-bit sequences contain the eight possible combinations of the input bits.<br>
+The truth table T = T (L) of the above circuit L consists of the output sequence Y that corresponds to the
+input sequences A, B, C. This truth table T may be expressed using fractional or relational notation, that is,
+T may be written in the form<br>
+T (A,B,C) = Y or T (L) = [A,B,C; Y ]<br>
+This form for the truth table forLis essentially the same as the truth table for a proposition discussed in Section 4.4.
+The only difference is that here the values for A, B, C, and Y are written horizontally, whereas in Section 4.4
+they are written vertically.<br><br>
+Consider a logic circuitLwith n input devices. There are many ways to form n input sequencesA1,A2, . . . , An
+so that they contain the 2n different possible combinations of the input bits. (Note that each sequence must contain
+2n bits.) One assignment scheme is as follows:<br><br>
+A1: Assign 2n-1 bits which are 0’s followed by 2n-1 bits which are 1’s.<br>
+A2: Repeatedly assign 2n-2 bits which are 0’s followed by 2n-2 bits which are 1’s.<br>
+A3: Repeatedly assign 2n-3 bits which are 0’s followed by 2n-3 bits which are 1’s.<br>
+And so on. The sequences obtained in this way will be called special sequences. Replacing 0 by 1 and 1 by 0 in
+the special sequences yields the complements of the special sequences.<br>
+<b>Remark:</b> Assuming the input are the special sequences, we frequently do not need to distinguish between the
+truth table<br>
+T (L) = [A1,A2, . . . , An
+;Y ]
+and the output Y itself.<br><br>
+<b>EXAMPLE 15.11</b><br>
+(a) Suppose a logic circuit L has n = 4 input devices A, B, C, D. The 2n = 24 = 16-bit special sequences for
+A, B, C, D follow:<br>
+A = 0000000011111111, C= 00110011001100110011<br>
+B = 0000111100001111, D= 01010101010101010101<br>
+That is:<br>
+(1) A begins with eight 0’s followed by eight 1’s. (Here 2n-1 = 23 = 8.)<br>
+(2) B begins with four 0’s followed by four 1’s, and so on. (Here 2n-2 = 22 = 4.)<br>
+(3) C begins with two 0’s followed by two 1’s, and so on. (Here 2n-3 = 21 = 2.)<br>
+(4) D begins with one 0 followed by one 1, and so on. (Here 2n-4 = 20 = 1.)<br>
+(b) Suppose a logic circuit L has n = 3 input devices A, B, C. The 2n = 23 = 8-bit special sequences for A, B,
+C and their complements A<br><br>
+	, B
+	, C
+	 are as follows:<br>
+A = 00001111, B= 00110011, C= 01010101<br>
+A
+	 = 11110000, B
+	 = 11001100, C
+	 = 10101010<br>
+Figure 15-15 contains a three-step algorithm for finding the truth table for a logic circuit L where the output
+Y is given by a Boolean sum-of-products expression in the inputs.<br> <img src="15.15.png" alt="img" style="width:750px;height:300px;"> <br>
+<b>EXAMPLE 15.12</b> Algorithm 15.5 is used to find the truth table T = T (L) of the logic circuit L in Fig. 15-12
+or, equivalently, of the above Boolean sum-of-products expression<br>
+Y = A · B · C + A · B
+	 · C + A
+	 · B<br>
+(1) The special sequences and their complements appear in Example 15.14(b).<br>
+(2) The products are as follows:<br>
+A · B · C = 00000001, A· B
+	 · C = 00000100, A
+	 · B = 00110000<br>
+(3) The sum is Y = 00110101<br>.
+Accordingly,<br>
+T (00001111, 00110011, 01010101) = 00110101<br>
+or simply T (L) = 00110101 where we assume the input consists of the special sequences.
+<br><br>
+<b>Boolean Functions</b><br>
+Let E be a Boolean expression with n variables x1, x2, . . . , xn. The entire discussion above can also be
+applied to E where now the special sequences are assigned to the variables x1, x2, . . . , xn instead of the input
+devices A1,A2, . . . , An. The truth table T = T (E) of E is defined in the same way as the truth table T = T (L)
+for a logic circuit L. For example, the Boolean expression<br>
+E = xyz + xy<br>
+	
+z + x
+	
+y<br>
+which is analogous to the logic circuit L in Example 15.12, yields the truth table<br>
+T (00001111, 00110011, 01010101) = 00110101<br>
+or simply T (E) = 00110101, where we assume the input consists of the special sequences.<br>
+<b>Remark:</b> The truth table for a Boolean expression E = E(x1, x2, . . . , xn) with n variables may also be viewed
+as a “Boolean” function from Bn into B. (The Boolean algebras Bn and B = {0, 1} are defined in Example 15.1.)<br>
+That is, each element in Bn is a list of n bits which when assigned to the list of variables in E produces an element
+in B. The truth table T (E) of E is simply the graph of the function.<br><br>
+<b>15.12 KARNAUGH MAPS</b><br>
+Karnaugh maps, where minterms involving the same variables are represented by squares, are pictorial
+devices for finding prime implicants and minimal forms for Boolean expressions involving at most six variables.
+We will only treat the cases of two, three, and four variables. In the context of Karnaugh maps, we will sometimes
+use the terms “squares” and “minterm” interchangeably. Recall that a minterm is a fundamental product which
+involves all the variables, and that a complete sum-of-products expression is a sum of minterms.<br>
+First we need to define the notion of adjacent products. Two fundamental products P1 and P2 are said to
+be adjacent if P1 and P2 have the same variables and if they differ in exactly one literal. Thus there must be
+an uncomplemented variable in one product and complemented in the other. In particular, the sum of two such
+adjacent products will be a fundamental product with one less literal.<br><br>Case of Three Variables
+The Karnaugh map corresponding to Boolean expressions E = E(x, y, z) with three variables x, y, z is
+shown in Fig. 15-18(a). Recall that there are exactly eight minterms with three variables:<br>
+xyz, xyz', xy'z', xy'z, x'yz, x'yz', x'y'z', x'y'z<br>
+These minterms are listed so that they correspond to the eight squares in the Karnaugh map in the obvious way.
+Furthermore, in order that every pair of adjacent products in Fig. 15-18(a) are geometrically adjacent, the
+right and left edges of the map must be identified. This is equivalent to cutting out, bending, and gluing the
+map along the identified edges to obtain the cylinder pictured in Fig. 15-18(b) where adjacent products are now
+represented by squares with one edge in common.<br><img src="15.18.png" alt="img" style="width:750px;height:300px;"><br>
+Viewing the Karnaugh map in Fig. 15-18(a) as a Venn diagram, the areas represented by the variables x, y,
+and z are shown in Fig. 15-19. Specifically, the variable x is still represented by the points in the upper half of
+the map, as shaded in Fig. 15-19(a), and the variable y is still represented by the points in the left half of the
+map, as shaded in Fig. 15-19(b). The new variable z is represented by the points in the left and right quarters of
+<br><img src="15.19.png" alt="img" style="width:850px;height:300px;"><br>
+the map, as shaded in Fig. 15-19(c). Thus x', y', and z' are represented, respectively, by points in the lower half,
+right half, and middle two quarters of the map.<br>
+By a basic rectangle in the Karnaugh map with three variables, we mean a square, two adjacent squares, or four
+squares which form a one-by-four or a two-by-two rectangle. These basic rectangles correspond to fundamental
+products of three, two, and one literal, respectively. Moreover, the fundamental product represented by a basic
+rectangle is the product of just those literals that appear in every square of the rectangle.<br>
+Suppose a complete sum-of-products Boolean expression E = E(x, y, z) is represented in the Karnaugh
+map by placing checks in the appropriate squares.Aprime implicant of E will be a maximal basic rectangle of E,
+i.e., a basic rectangle contained in E which is not contained in any larger basic rectangle in E.Aminimal sum-ofproducts
+form for E will consist of a minimal cover of E, that is, a minimal number of maximal basic rectangles
+of E which together include all the squares of E.<br><br>
+</p>
+
+  
+</article>
+
+<footer>Copyright &copy; kiet.edu</br>
+<a href="aboutus.html"target="_blank" style="color:white">Developers</a>: Neeraj Maurya,Archy Mathur,Ashi Anand( GROUP LEADER) & Paras Verma
+</footer>
+
+</div>
+
+</body>
+</html>
+

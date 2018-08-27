@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<a href="http://www.kiet.edu/"><img style="float:left;"src="ic_launcher.jpg"></a>
+<p><font size="25"><b>KIET GROUP OF INSTITUTIONS</b></font>
+</br>
+(A Technical Campus Approved By AICTE
+Affiliated To Dr.A.P.J Abdul Kalam Technical University ,Lucknow)</br>
+Accredited By NAAC With Grade'A'</br>
+"Shaping Young Minds With Skill Oriented & Value Based Education"</p>
+</p>
+
+   <a href="http://www.kiet.edu/dept.php?id=mca" style="color:white;"><h2>DEPARTMENT OF COMPUTER APPLICATIONS</h2></a>
+   
+</header>
+
+
+<nav>
+
+  <ul>
+ <a href="#"> <button class="accordion">SYLLABUS</button></a>
+  <div class="panel">
+  
+</div>
+	 <a href="unit1.html"> <button class="accordion">UNIT 1</button></a>
+<div class="panel">
+  
+</div>
+
+ <a href="unit22.html"> <button class="accordion">UNIT 2</button></a>
+<div class="panel">
+  
+ 
+</div>
+
+ <a href="unit33.html"> <button class="accordion">UNIT 3</button></a>
+<div class="panel">
+
+</div>
+ <a href="new.css"> <button class="accordion">UNIT 4</button></a>
+<div class="panel">
+
+ 
+</div>
+ <a href="new.css"> <button class="accordion">UNIT 5</button></a>
+<div class="panel">
+
+ 
+</div>
+ <a href="new.css"> <button class="accordion">ASSIGNMENTS</button></a>
+<div class="panel">
+
+</div>
+ <a href="new.css"> <button class="accordion">TUTORIALS</button></a>
+<div class="panel">
+
+
+
+
+
+  </ul>
+</nav>
+
+<article>
+
+<ul>
+<li>
+<a href="#Home">HOME</a>
+</li>
+<li>
+<a href="aim2.html">DISCRETE MATHEMATICS</a>
+</li>
+<li>
+<a href="education2.html">COMPUTER ORGANISATION</a>
+</li>
+<li>
+<a href="hobby2.html">C  PROGRAMMING</a>
+</li>
+
+<li>
+<a href="personalskills.html">PROFESSIONAL COMMUNICATION</a>
+</li>
+<li>
+<a href="technical.html">
+
+A F M</a>
+</li>
+</ul >
+<h1 style="font-size:40px">UNIT 1</h1>
+
+
+<b><u>SET THEORY:</u></b> <a href="#intro">Introduction</a>, <a href="#cardinals">Size of sets and cardinals</a>, <a href="#vd">Venn diagrams</a>, Combination of sets, Multisets, Ordered pairs and Set identities.
+Relation & Functions: Relations- Definition, Operations on relations, Composite relations, Properties of relations, Equality of relations, 
+Partial order relation. Function- Definition, Classification of functions, Operations on functions, Recursively defined function.</br><br>
+<b>Notion of Proof:</b> Introduction, Mathematical Induction, Strong Induction and Induction with Nonzero base cases.</br>
+<h1 style="text-align:center; font-size:30px"><u>SET THEORY</u></h1>
+<p><h3 id="intro">INTRODUCTION</h3>
+The concept of a set appears in all mathematics. This chapter introduces the notation and terminology of set
+theory which is basic and used throughout the text. The chapter closes with the formal definition of mathematical
+induction, with examples.
+<h3 id="cardinals"> SIZE OF SETS AND CARDINALS</h3>
+<b>Set:</b>Unorderd collection of objects is known as set.<br>
+<b>Set Representation:</b>Set can be represented in three forms:<br>
+<dl>
+<dt><b>1.</b>Listing/Roaster Form</dt><br>
+<dd> <b>Ex:</b>A={a,u,o,i,e}<br>Is a set that contains vowel of english alphabet and here order does not matters.</dd><br>
+<dt><b>2.</b>Set Builder Form(Quality of set's element)</dt><br>
+<dd><b>Ex:</b><br>A={x|x is a month of year}</dd><br>
+<dt><b>3.</b>Diagram</dt><br>
+<dd>In This Type of sets we use diagrams to represent it.</dd><br>
+<img src="venn-diags01.jpg">
+
+</dl><br>
+Membership in a set is denoted as follows:<br>
+a ∈ S denotes that a belongs to a set S<br>
+a, b ∈ S denotes that a and b belong to a set <br>
+Here ∈ is the symbol meaning “is an element of.”We use ∈ to mean “is not an element of.”<br><br>
+<b>Specifying Sets</b><br>
+There are essentially two ways to specify a particular set. One way, if possible, is to list its members separated
+by commas and contained in braces { }.Asecond way is to state those properties which characterized the elements
+in the set. Examples illustrating these two ways are:<br>
+A = {1, 3, 5, 7, 9} and B = {x | x is an even integer, x > 0}<br>
+That is, A consists of the numbers 1, 3, 5, 7, 9. The second set, which reads:<br>
+B is the set of x such that x is an even integer and x is greater than 0,<br>
+denotes the set B whose elements are the positive integers. Note that a letter, usually x, is used to denote a typical
+member of the set; and the vertical line | is read as “such that” and the comma as “and.”<br><br>
+<h3>EXAMPLE </h3>
+(a) The set A above can also be written as A = {x | x is an odd positive integer, x < 10}.<br>
+(b) We cannot list all the elements of the above set B although frequently we specify the set by
+B = {2, 4, 6, . . .}<br>
+where we assume that everyone knows what we mean. Observe that 8 ∈ B, but 3 / ∈ B.<br>
+(c) Let E = {x | x2 − 3x + 2 = 0}, F = {2, 1} and G = {1, 2, 2, 1}. Then E = F = G.<br>
+We emphasize that a set does not depend on the way in which its elements are displayed. A set remains the
+same if its elements are repeated or rearranged.<br>
+Even if we can list the elements of a set, it may not be practical to do so. That is, we describe a set by listing its
+elements only if the set contains a few elements; otherwise we describe a set by the property which characterizes
+its elements.<br><br>
+<h3>Subsets</h3>
+Suppose every element in a set A is also an element of a set B, that is, suppose a ∈ A implies a ∈ B. Then
+A is called a subset of B.We also say that A is contained in B or that B contains A. This relationship is written
+A ⊆ B or B ⊇ A<br>
+Two sets are equal if they both have the same elements or, equivalently, if each is contained in the other. That is:
+A = B if and only if A ⊆ B and B ⊆ A<br>
+If A is not a subset of B, that is, if at least one element of A does not belong to B, we write A ⊆ B.<br><br>
+<h3>EXAMPLE</h3> Consider the sets:<br>
+A = {1, 3, 4, 7, 8, 9}, B= {1, 2, 3, 4, 5}, C= {1, 3}.<br>
+Then C ⊆ A and C ⊆ B since 1 and 3, the elements of C, are also members of A and B. But B ⊆ A since some
+of the elements of B, e.g., 2 and 5, do not belong to A. Similarly, A ⊆ B.<br><br>
+<b><u>Property 1:</u></b> It is common practice in mathematics to put a vertical line “|” or slanted line “/” through a symbol
+to indicate the opposite or negative meaning of a symbol.<br>
+<b><u>Property 2:</u></b> The statement A ⊆ B does not exclude the possibility that A = B. In fact, for every set A we have
+A ⊆ A since, trivially, every element in A belongs to A. However, if A ⊆ B and A = B, then we say A is a
+proper subset of B (sometimes written A ⊂ B).<br>
+<b><u>Property 3:</u></b> Suppose every element of a set A belongs to a set B and every element of B belongs to a set C.
+Then clearly every element of A also belongs to C. In other words, if A ⊆ B and B ⊆ C, then A ⊆ C.
+The above remarks yield the following theorem.<br><br>
+<h3>Theorem:</h3> Let A, B, C be any sets. Then:<br>
+(i) A ⊆ A<br>
+(ii) If A ⊆ B and B ⊆ A, then A = B<br>
+(iii) If A ⊆ B and B ⊆ C, then A ⊆ C<br><br>
+<b>Special symbols</b><br>
+Some sets will occur very often in the text, and so we use special symbols for them. Some such symbols are:<br>
+N = the set of natural numbers or positive integers: 1, 2, 3, . . .<br>
+Z = the set of all integers: . . . ,−2,−1, 0, 1, 2, . . .<br>
+Q = the set of rational numbers<br>
+R = the set of real numbers<br>
+C = the set of complex numbers<br>
+Observe that N ⊆ Z ⊆ Q ⊆ R ⊆ C.<br><br>
+<h3>Universal Set, Empty Set</h3>
+All sets under investigation in any application of set theory are assumed to belong to some fixed large set
+called the universal set which we denote by "U" unless otherwise stated or implied.<br>
+Given a universal set U and a property P, there may not be any elements of U which have property P. For
+example, the following set has no elements:<br>
+S = {x | x is a positive integer, x<sup>2</sup> = 3}<br>
+Such a set with no elements is called the empty set or null set and is denoted by<br>
+∅<br>
+There is only one empty set. That is, if S and T are both empty, then S = T , since they have exactly the same
+elements, namely, none.<br>
+The empty set ∅ is also regarded as a subset of every other set. Thus we have the following simple result
+which we state formally.<br><br>
+<b>Theorem 1.2:</b> For any set A, we have ∅ ⊆ A ⊆ U.<br><br>
+<h3>Disjoint Sets</h3>
+Two sets A and B are said to be disjoint if they have no elements in common. For example, suppose<br>
+A = {1, 2}, B= {4, 5, 6}, and C = {5, 6, 7, 8}<br>
+Then A and B are disjoint, and A and C are disjoint. But B and C are not disjoint since B and C have elements
+in common, e.g., 5 and 6.We note that if A and B are disjoint, then neither is a subset of the other (unless one is
+the empty set).<br><br>
+<h3 id="vd">VENN DIAGRAMS</h3>
+A Venn diagram is a pictorial representation of sets in which sets are represented by enclosed areas in the
+plane. The universal set U is represented by the interior of a rectangle, and the other sets are represented by disks
+lying within the rectangle. If A ⊆ B, then the disk representing A will be entirely within the disk representing B
+as in Fig. 1-1(a). If A and B are disjoint, then the disk representing A will be separated from the disk representing
+B as in Fig. 1-1(b).<br>
+
+
+Fig. 1-1
+
+
+<br>
+However, if A and B are two arbitrary sets, it is possible that some objects are in A but not in B, some are
+in B but not in A, some are in both A and B, and some are in neither A nor B; hence in general we represent A
+and B as in Fig. 1-1(c).<br><br>
+<h3>Arguments and Venn Diagrams</h3>
+Many verbal statements are essentially statements about sets and can therefore be described by Venn diagrams.
+Hence Venn diagrams can sometimes be used to determine whether or not an argument is valid.<br><br>
+<h3>EXAMPLE </h3> Show that the following argument (adapted from a book on logic by Lewis Carroll, the author
+of Alice in Wonderland) is valid:<br>
+S1: All my tin objects are saucepans.<br>
+S2: I find all your presents very useful.<br>
+S3: None of my saucepans is of the slightest use.<br>
+S : Your presents to me are not made of tin.<br>
+The statements S1, S2, and S3 above the horizontal line denote the assumptions, and the statement S below
+the line denotes the conclusion. The argument is valid if the conclusion S follows logically from the assumptions
+S1, S2, and S3.<br>
+By S1 the tin objects are contained in the set of saucepans, and by S3 the set of saucepans and the set of
+useful things are disjoint. Furthermore, by S2 the set of “your presents” is a subset of the set of useful things.<br>
+Accordingly, we can draw the Venn diagram in Fig. 1-2.<br>
+The conclusion is clearly valid by the Venn diagram because the set of “your presents” is disjoint from the
+set of tin objects.<br>
+
+
+Fig. 1-2
+
+
+<br><h3>SET OPERATIONS</h3>
+This section introduces a number of set operations, including the basic operations of union, intersection, and
+complement.<br><br>
+<h3>Union and Intersection</h3>
+The union of two sets A and B, denoted by A ∪ B, is the set of all elements which belong to A or to B;
+that is,<br>
+A ∪ B = {x | x ∈ A or x ∈ B}<br>
+Here “or” is used in the sense of and/or. Figure 1-3(a) is a Venn diagram in which A ∪ B is shaded.
+The intersection of two sets A and B, denoted by A ∩ B, is the set of elements which belong to both A and
+B; that is,<br>
+A ∩ B = {x | x ∈ A and x ∈ B}<br>
+Figure 1-3(b) is a Venn diagram in which A ∩ B is shaded.<br>
+
+
+Fig. 1-3
+
+
+
+<br>Recall that sets A and B are said to be disjoint or nonintersecting if they have no elements in common or,
+using the definition of intersection, if A ∩ B = ∅, the empty set. Suppose<br>
+S = A ∪ B and A ∩ B = ∅<br>
+Then S is called the disjoint union of A and B.<br><br>
+<h3>EXAMPLE</h3>
+(a) Let A = {1, 2, 3, 4}, B = {3, 4, 5, 6, 7}, C = {2, 3, 8, 9}. Then<br>
+A ∪ B = {1, 2, 3, 4, 5, 6, 7}, A∪ C = {1, 2, 3, 4, 8, 9}, B∪ C = {2, 3, 4, 5, 6, 7, 8, 9},<br>
+A ∩ B = {3, 4}, A∩ C = {2, 3}, B∩ C = {3}.<br>
+(b) Let U be the set of students at a university, and letM denote the set of male students and let F denote the set
+of female students. The U is the disjoint union of M of F; that is,<br>
+U = M ∪ F and M ∩ F = ∅<br>
+This comes from the fact that every student in U is either in M or in F, and clearly no student belongs to
+both M and F, that is, M and F are disjoint.<br><br>
+The following properties of union and intersection should be noted.<br><br>
+<b><u>Property 1:</u></b> Every element x in A∩B belongs to both A and B; hence x belongs to A and x belongs to B. Thus
+A ∩ B is a subset of A and of B; namely<br>
+A ∩ B ⊆ A and A ∩ B ⊆ B<br><br>
+<b><u>Property 2:</u></b> An element x belongs to the union A∪ B if x belongs to A or x belongs to B; hence every element
+in A belongs to A ∪ B, and every element in B belongs to A ∪ B. That is,<br>
+A ⊆ A ∪ B and B ⊆ A ∪ B<br>
+We state the above results formally:<br><br>
+<h3>Theorem:</h3> For any sets A and B, we have:<br>
+(i) A ∩ B ⊆ A ⊆ A ∪ B and (ii) A ∩ B ⊆ B ⊆ A ∪ B.<br>
+The operation of set inclusion is closely related to the operations of union and intersection, as shown by the
+following theorem.<br><br>
+<h3>Theorem :</h3> The following are equivalent: A ⊆ B, A ∩ B = A, A ∪ B = B.<br>
+This theorem is proved in Problem 1.8. Other equivalent conditions to are given in Problem 1.31.<br>
+
+
+Fig. 1-4
+
+
+<br><h3>Complements, Differences, Symmetric Differences</h3>
+Recall that all sets under consideration at a particular time are subsets of a fixed universal set U. The absolute
+complement or, simply, complement of a set A, denoted by AC, is the set of elements which belong to U but which
+do not belong to A. That is,<br>
+AC = {x | x ∈ U, x /∈ A}<br>
+Some texts denote the complement of A by A' or ¯A. Fig. 1-4(a) is a Venn diagram in which AC is shaded.<br>
+The relative complement of a set B with respect to a set A or, simply, the difference of A and B, denoted by<br>
+A\B, is the set of elements which belong to A but which do not belong to B; that is<br>
+A\B = {x | x ∈ A, x / ∈ B}<br>
+The set A\B is read “A minus B.” Many texts denote A\B by A − B or A ∼ B. Fig. 1-4(b) is a Venn diagram in
+which A\B is shaded.<br>
+The symmetric difference of sets A and B, denoted by A ⊕ B, consists of those elements which belong to A
+or B but not to both. That is,<br>
+A ⊕ B = (A ∪ B)\(A ∩ B) or A ⊕ B = (A\B) ∪ (B\A)<br>
+Figure 1-4(c) is a Venn diagram in which A ⊕ B is shaded.<br><br>
+<h3>EXAMPLE </h3> Suppose U = N = {1, 2, 3, . . .} is the universal set. Let<br>
+A = {1, 2, 3, 4}, B= {3, 4, 5, 6, 7}, C= {2, 3, 8, 9}, E= {2, 4, 6, . . .}<br>
+(Here E is the set of even integers.) Then:<br>
+AC = {5, 6, 7, . . .}, BC = {1, 2, 8, 9, 10, . . .}, EC = {1, 3, 5, 7, . . .}<br>
+That is, EC is the set of odd positive integers. Also:<br>
+A\B = {1, 2}, A\C = {1, 4}, B\C = {4, 5, 6, 7}, A\E = {1, 3},<br>
+B\A = {5, 6, 7}, C\A = {8, 9}, C\B = {2, 8, 9}, E\A = {6, 8, 10, 12, . . .}.<br><br>
+Furthermore:<br>
+A ⊕ B = (A\B) ∪ (B\A) = {1, 2, 5, 6, 7}, B⊕ C = {2, 4, 5, 6, 7, 8, 9},<br>
+A ⊕ C = (A\C) ∪ (B\C) = {1, 4, 8, 9}, A⊕ E = {1, 3, 6, 8, 10, . . .}.<br><br>
+<h3>EXAMPLE </h3> Figure 1-5(a) is the Venn diagram of three sets A, B, C. The following lists the m = 23 = 8
+fundamental products of the sets A, B, C:<br>
+P1 = A ∩ B ∩ C, P3 = A ∩ BC ∩ C, P5 = AC ∩ B ∩ C, P7 = AC ∩ BC ∩ C,<br>
+P2 = A ∩ B ∩ CC, P4 = A ∩ BC ∩ CC, P6 = AC ∩ B ∩ CC, P8 = AC ∩ BC ∩ CC.<br>
+The eight products correspond precisely to the eight disjoint regions in the Venn diagram of sets A, B, C as
+indicated by the labeling of the regions in Fig. 1-5(b).<br><br>
+
+
+Fig. 1-5<br>
+
+
+
+<h3>FINITE SETS</h3>
+Sets can be finite or infinite.A set S is said to be finite if S is empty or if S contains exactly m elements where
+m is a positive integer; otherwise S is infinite.<br><br>
+<h3>EXAMPLE </h3>
+(a) The setAof the letters of the English alphabet and the setD of the days of the week are finite sets. Specifically,
+A has 26 elements and D has 7 elements.<br>
+(b) Let E be the set of even positive integers, and let I be the unit interval, that is,<br>
+E = {2, 4, 6, . . .} and I = [0, 1] = {x | 0 ≤ x ≤ 1}<br>
+Then both E and I are infinite.<br><br>
+A set S is countable if S is finite or if the elements of S can be arranged as a sequence, in which case S is
+said to be countably infinite; otherwise S is said to be uncountable. The above set E of even integers is countably
+infinite, whereas one can prove that the unit interval I = [0, 1] is uncountable.<br><br>
+<h3>Inclusion–Exclusion Principle</h3>
+There is a formula for n(A ∪ B) even when they are not disjoint, called the Inclusion–Exclusion Principle.<br>
+Namely:<br><br>
+<h3>Theorem (Inclusion–Exclusion Principle):</h3> Suppose A and B are finite sets. Then A ∪ B and A ∩ B are
+finite and<br>
+n(A ∪ B) = n(A) + n(B) − n(A ∩ B)<br>
+That is, we find the number of elements in A or B (or both) by first adding n(A) and n(B) (inclusion) and then
+subtracting n(A ∩ B) (exclusion) since its elements were counted twice.<br>
+We can apply this result to obtain a similar formula for three sets:<br><br>
+<b>Corollary:</b> Suppose A, B, C are finite sets. Then A ∪ B ∪ C is finite and<br>
+n(A ∪ B ∪ C) = n(A) + n(B) + n(C) − n(A ∩ B) − n(A ∩ C) − n(B ∩ C) + n(A ∩ B ∩ C)<br><br>
+<br>Mathematical induction may be used to further generalize this result to any number of finite sets.<br><br>
+<h3>EXAMPLE </h3> Suppose a list A contains the 30 students in a mathematics class, and a list B contains the
+35 students in an English class, and suppose there are 20 names on both lists. Find the number of students:<br>
+(a) only on list A, (b) only on list B, (c) on list A or B (or both), (d) on exactly one list.<br><br>
+(a) List A has 30 names and 20 are on list B; hence 30 − 20 = 10 names are only on list A.<br>
+(b) Similarly, 35 − 20 = 15 are only on list B.<br>
+(c) We seek n(A ∪ B). By inclusion–exclusion,<br>
+n(A ∪ B) = n(A) + n(B) − n(A ∩ B) = 30 + 35 − 20 = 45.<br>
+In other words, we combine the two lists and then cross out the 20 names which appear twice.<br>
+(d) By (a) and (b), 10 + 15 = 25 names are only on one list; that is, n(A ⊕ B) = 25.<br><br>
+<h3>CLASSES OF SETS, POWER SETS, PARTITIONS</h3>
+Given a set S, we might wish to talk about some of its subsets. Thus we would be considering a set of sets.<br>
+Whenever such a situation occurs, to avoid confusion, we will speak of a class of sets or collection of sets rather
+than a set of sets. If we wish to consider some of the sets in a given class of sets, then we speak of subclass or
+subcollection.<br><br>
+<h3>EXAMPLE </h3> Suppose S = {1, 2, 3, 4}.<br>
+(a) Let A be the class of subsets of S which contain exactly three elements of S. Then<br>
+A = [{1, 2, 3}, {1, 2, 4}, {1, 3, 4}, {2, 3, 4}]<br>
+That is, the elements of A are the sets {1, 2, 3}, {1, 2, 4}, {1, 3, 4}, and {2, 3, 4}.<br>
+(b) Let B be the class of subsets of S, each which contains 2 and two other elements of S. Then<br>
+B = [{1, 2, 3}, {1, 2, 4}, {2, 3, 4}]<br>
+The elements of B are the sets {1, 2, 3}, {1, 2, 4}, and {2, 3, 4}. Thus B is a subclass of A, since every
+element of B is also an element of A. (To avoid confusion, we will sometimes enclose the sets of a class in
+brackets instead of braces.)<br><br>
+<h3>Power Sets</h3>
+For a given set S , we may speak of the class of all subsets of S. This class is called the power set of S , and
+will be denoted by P(S). If S is finite, then so is P(S). In fact, the number of elements in P(S) is 2 raised to the
+power n(S). That is,<br>
+n(P (S)) = 2<sup>n</sup>(S)<br><br>
+<h3>EXAMPLE </h3> Suppose S = {1, 2, 3}. Then<br>
+P(S) = [∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, S]<br>
+Note that the empty set ∅ belongs to P(S) since ∅ is a subset of S. Similarly, S belongs to P(S). As expected
+from the above remark, P(S) has 23 = 8 elements.<br><br>
+<h3>Partitions</h3>
+Let S be a nonempty set. A partition of S is a subdivision of S into nonoverlapping, nonempty subsets.<br>
+Precisely, a partition of S is a collection {Ai } of nonempty subsets of S such that:<br>
+(i) Each a in S belongs to one of the Ai .<br>
+(ii) The sets of {Ai } are mutually disjoint; that is, if<br>
+Aj = Ak then Aj ∩ Ak = ∅<br>
+The subsets in a partition are called cells. Figure 1-6 is a Venn diagram of a partition of the rectangular set
+S of points into five cells, A1, A2,A3,A4,A5.<br><br>
+
+
+Fig. 1-6
+
+
+<br><h3>EXAMPLE </h3> Consider the following collections of subsets of S = {1, 2, . . ., 8, 9}:<br>
+(i) [{1, 3, 5}, {2, 6}, {4, 8, 9}]<br>
+(ii) [{1, 3, 5}, {2, 4, 6, 8}, {5, 7, 9}]<br>
+(iii) [{1, 3, 5}, {2, 4, 6, 8}, {7, 9}]<br><br>
+Then (i) is not a partition of S since 7 in S does not belong to any of the subsets. Furthermore, (ii) is not a
+partition of S since {1, 3, 5} and {5, 7, 9} are not disjoint. On the other hand, (iii) is a partition of S.<br><br>
+<h3>SET IDENTITIES, DUALITY</h3>
+Sets under the operations of union, intersection, and complement satisfy various laws (identities) which are<br>
+listed in Table 1-1. In fact, we formally state this as:<br><br>
+<h3>Theorem:</h3> Sets satisfy the laws in Table 1-1.<br><br>
+
+table
+
+
+<b>Remark:</b> Each law in Table 1-1 follows from an equivalent logical law. Consider, for example, the proof of
+DeMorgan’s Law 10(a):<br>
+(A ∪ B)C = {x |x /∈ (A or B)} = {x |x /∈ A and x /∈ B} = AC ∩ BC<br>
+Here we use the equivalent (DeMorgan’s) logical law:<br>
+¬(p ∨ q) = ¬p ∧¬q<br>
+where ¬ means “not,” ∨ means “or,” and ∧ means “and.” (Sometimes Venn diagrams are used to illustrate the
+laws in Table 1-1)<br><br>
+<h3>Duality</h3>
+The identities in Table 1-1 are arranged in pairs, as, for example, (2a) and (2b).We now consider the principle
+behind this arrangement. Suppose E is an equation of set algebra. The dual E
+∗ of E is the equation obtained by replacing each occurrence of ∪, ∩, U and ∅ in E by ∩, ∪, ∅, and U, respectively. For example, the dual of
+(U ∩ A) ∪ (B ∩ A) = A is (∅ ∪ A) ∩ (B ∪ A) = A<br>
+Observe that the pairs of laws in Table 1-1 are duals of each other. It is a fact of set algebra, called the principle
+of duality, that if any equation E is an identity then its dual E
+∗ is also an identity.<br><br></p>
+<h1>RELATIONS AND FUNCTIONS</h1>
+<p><h3>INTRODUCTION</h3>
+The reader is familiar with many relations such as “less than,” “is parallel to,” “is a subset of,” and so on.<br>
+In a certain sense, these relations consider the existence or nonexistence of a certain connection between pairs
+of objects taken in a definite order. Formally, we define a relation in terms of these “ordered pairs.”<br>
+An ordered pair of elements a and b, where a is designated as the first element and b as the second element,
+is denoted by (a, b). In particular,<br>
+(a, b) = (c, d)<br>
+if and only if a = c and b = d. Thus (a, b) = (b, a) unless a = b. This contrasts with sets where the order of
+elements is irrelevant; for example, {3, 5} = {5, 3}.<br><br>
+<h3>PRODUCT SETS</h3>
+Consider two arbitrary sets A and B. The set of all ordered pairs (a, b) where a ∈ A and b ∈ B is called
+the product, or Cartesian product, of A and B. A short designation of this product is A × B, which is read
+“A cross B.” By definition,<br>
+A × B = {(a, b) | a ∈ A and b ∈ B}<br>
+One frequently writes A<sup>2</sup> instead of A × A.<br><br>
+<h3>EXAMPLE </h3> Let A = {1, 2} and B = {a, b, c}. Then<br>
+A × B = {(1, a), (1, b), (1, c), (2, a), (2, b), (2, c)}<br>
+B × A = {(a, 1), (b, 1), (c, 1), (a, 2), (b, 2), (c, 2)}<br>
+Also, A × A = {(1, 1), (1, 2), (2, 1), (2, 2)}<br><br>
+<h3>RELATIONS</h3>
+We begin with a definition.<br>
+<b>Definition :</b> Let A and B be sets. A binary relation or, simply, relation from A to B is a subset of A × B.<br>
+Suppose R is a relation from A to B. Then R is a set of ordered pairs where each first element comes from
+A and each second element comes from B. That is, for each pair a ∈ A and b ∈ B, exactly one of the following
+is true:<br>
+(i) (a, b) ∈ R; we then say “a is R-related to b”, written aRb.<br>
+(ii) (a, b) / ∈ R; we then say “a is not R-related to b”, written aRb.<br>
+If R is a relation from a set A to itself, that is, if R is a subset of A2 = A×A, then we say that R is a relation on A.<br>
+The domain of a relation R is the set of all first elements of the ordered pairs which belong to R, and the
+range is the set of second elements.<br><br>
+<h3>EXAMPLE</h3>
+(a) A = (1, 2, 3) and B = {x, y, z}, and let R = {(1, y), (1, z), (3, y)}. Then R is a relation from A to B since R
+is a subset of A × B.With respect to this relation,<br>
+1Ry, 1Rz, 3Ry, but 1Rx, 2Rx, 2Ry, 2Rz, 3Rx, 3Rz<br>
+The domain of R is {1, 3} and the range is {y, z}.<br>
+(b) Set inclusion ⊆ is a relation on any collection of sets. For, given any pair of set A and B, either A ⊆ B
+or A ⊆ B.<br>
+(c) A familiar relation on the set Z of integers is “m divides n.” A common notation for this relation is to write
+m|n when m divides n. Thus 6 | 30 but 7 | 25.<br>
+(d) Consider the set L of lines in the plane. Perpendicularity, written “⊥,” is a relation on L. That is, given any
+pair of lines a and b, either a ⊥b or a⊥ b. Similarly, “is parallel to,” written “||,” is a relation on L since
+either a  b or a  b.<br>
+(e) Let A be any set. An important relation on A is that of equality,
+{(a, a) | a ∈ A}<br>
+which is usually denoted by “=.” This relation is also called the identity or diagonal relation on A and it will
+also be denoted by A or simply .<br>
+(f) Let A be any set. Then A × A and ∅ are subsets of A × A and hence are relations on A called the universal
+relation and empty relation, respectively.<br><br>
+<h3>Inverse Relation</h3>
+Let R be any relation from a set A to a set B. The inverse of R, denoted by R<sup>−1</sup>, is the relation from B to A
+which consists of those ordered pairs which, when reversed, belong to R; that is,<br>
+R<sup>−1</sup> = {(b, a) | (a, b) ∈ R}<br><br>
+<b>For example,</b> let A = {1, 2, 3} and B = {x, y, z}. Then the inverse of<br>
+R = {(1, y), (1, z), (3, y)} is R<sup>−1</sup> = {(y, 1), (z, 1), (y, 3)}
+Clearly, if R is any relation, then (R<sup>−1</sup>)<sup>−1</sup> = R. Also, the domain and range of R<sup>−1</sup> are equal, respectively, to
+the range and domain of R. Moreover, if R is a relation on A, then R<sup>−1</sup> is also a relation on A.<br><br>
+
+
+
+2.4 PICTORIAL REPRESENTATIVES OF RELATIONS
+There are various ways of picturing relations.
+Relations on R
+Let S be a relation on the set R of real numbers; that is, S is a subset of R2 = R × R. Frequently, S consists
+of all ordered pairs of real numbers which satisfy some given equation E(x, y) = 0 (such as x2 + y2 = 25).
+Since R2 can be represented by the set of points in the plane, we can picture S by emphasizing those points
+in the plane which belong to S. The pictorial representation of the relation is sometimes called the graph of the
+relation. For example, the graph of the relation x2+y2 = 25 is a circle having its center at the origin and radius 5.
+See Fig. 2-2(a).
+
+
+Fig. 2-2
+
+
+Directed Graphs of Relations on Sets
+There is an important way of picturing a relation R on a finite set. First we write down the elements of the
+set, and then we draw an arrow from each element x to each element y whenever x is related to y. This diagram
+is called the directed graph of the relation. Figure 2-2(b), for example, shows the directed graph of the following
+relation R on the set A = {1, 2, 3, 4}:
+R = {(1, 2), (2, 2), (2, 4), (3, 2), (3, 4), (4, 1), (4, 3)}
+Observe that there is an arrow from 2 to itself, since 2 is related to 2 under R.
+These directed graphs will be studied in detail as a separate subject in Chapter 8.We mention it here mainly
+for completeness.
+
+
+Pictures of Relations on Finite Sets
+Suppose A and B are finite sets. There are two ways of picturing a relation R from A to B.
+(i) Form a rectangular array (matrix) whose rows are labeled by the elements of A and whose columns are
+labeled by the elements of B. Put a 1 or 0 in each position of the array according as a ∈ A is or is not
+related to b ∈ B. This array is called the matrix of the relation.
+(ii) Write down the elements of A and the elements of B in two disjoint disks, and then draw an arrow from
+a ∈ Ato b ∈ B whenever a is related to b. This picture will be called the arrow diagram of the relation.
+Figure 2-3 pictures the relation R in Example 2.3(a) by the above two ways.
+Fig. 2-3
+
+
+
+<h3>COMPOSITION OF RELATIONS</h3>
+Let A, B and C be sets, and let R be a relation from A to B and let S be a relation from B to C. That is, R is
+a subset of A × B and S is a subset of B × C. Then R and S give rise to a relation from A to C denoted by R◦S
+and defined by:<br>
+a(R◦S)c if for some b ∈ B we have aRb and bSc.<br>
+That is ,<br>
+R ◦ S = {(a, c) | there exists b ∈ B for which (a, b) ∈ R and (b, c) ∈ S}<br>
+The relation R◦S is called the composition of R and S; it is sometimes denoted simply by RS.<br>
+Suppose R is a relation on a set A, that is, R is a relation from a set A to itself. Then R◦R, the composition
+of R with itself, is always defined. Also, R◦R is sometimes denoted by R2. Similarly, R3 = R2◦R = R◦R◦R,
+and so on. Thus Rn is defined for all positive n.<br><br>
+
+<h3>EXAMPLE </h3> Let A = {1, 2, 3, 4}, B = {a, b, c, d}, C = {x, y, z} and let<br>
+R = {(1, a), (2, d), (3, a), (3, b), (3, d)} and S = {(b, x), (b, z), (c, y), (d, z)}<br>
+Consider the arrow diagrams of R and S as in Fig. 2-4. Observe that there is an arrow from 2 to d which is followed
+by an arrow from d to z. We can view these two arrows as a “path” which “connects” the element 2 ∈ A to the
+element z ∈ C. Thus:<br>
+2(R ◦ S)z since 2Rd and dSz<br>
+Similarly there is a path from 3 to x and a path from 3 to z. Hence<br>
+3(R◦S)x and 3(R◦S)z<br>
+No other element of A is connected to an element of C. Accordingly,<br>
+R ◦ S = {(2, z), (3, x), (3, z)}<br>
+Our first theorem tells us that composition of relations is associative.<br><br>
+<h3>Theorem:</h3> Let A, B, C and D be sets. Suppose R is a relation from A to B, S is a relation from B to C, and
+T is a relation from C to D. Then<br>
+(R ◦ S) ◦ T = R ◦ (S ◦ T )<br>
+
+
+Fig. 2-4
+
+
+<h3>Composition of Relations and Matrices</h3>
+There is another way of finding R◦S. Let MR and MS denote respectively the matrix representations of the
+relations R and S. Then<br>
+MR =
+a b c d
+1
+2
+3
+4
+⎡
+⎢⎢⎣
+1 0 0 0
+0 0 0 1
+1 1 0 1
+0 0 0 0
+⎤
+⎥⎥⎦
+and MS =
+x y z
+a
+b
+c
+d
+⎡
+⎢⎢⎣
+0 0 0
+1 0 1
+0 1 0
+0 0 1
+⎤
+⎥⎥⎦<br>
+Multiplying MR and MS we obtain the matrix
+x y z
+M = MRMS =
+1
+2
+3
+4
+⎡
+⎢⎢⎣
+0 0 0
+0 0 1
+1 0 2
+0 0 0
+⎤
+⎥⎥⎦<br>
+The nonzero entries in this matrix tell us which elements are related by R◦S. Thus M = MRMS and MR◦S have
+the same nonzero entries.<br><br>
+<h3> PROPERTIES OF RELATIONS</h3>
+This section discusses a number of important types of relations defined on a set A.<br><br>
+<b>Reflexive Relations</b><br>
+A relation R on a set A is reflexive if aRa for every a ∈ A, that is, if (a, a) ∈ R for every a ∈ A. Thus R is
+not reflexive if there exists a ∈ A such that (a, a) / ∈ R.<br><br>
+<h3>EXAMPLE</h3> Consider the following five relations on the set A = {1, 2, 3, 4}:<br>
+R1 = {(1, 1), (1, 2), (2, 3), (1, 3), (4, 4)}<br>
+R2 = {(1, 1)(1, 2), (2, 1), (2, 2), (3, 3), (4, 4)}<br>
+R3 = {(1, 3), (2, 1)}<br>
+R4 = ∅, the empty relation<br>
+R5 = A × A, the universal relation<br>
+Determine which of the relations are reflexive.<br>
+Since A contains the four elements 1, 2, 3, and 4, a relation R on A is reflexive if it contains the four pairs
+(1, 1), (2, 2), (3, 3), and (4, 4). Thus only R2 and the universal relation R5 = A × A are reflexive. Note that
+R1,R3, and R4 are not reflexive since, for example, (2, 2) does not belong to any of them.<br><br>
+<h3>EXAMPLE</h3> Consider the following five relations:<br>
+(1) Relation ≤ (less than or equal) on the set Z of integers.<br>
+(2) Set inclusion ⊆ on a collection C of sets.<br>
+(3) Relation ⊥ (perpendicular) on the set L of lines in the plane.<br>
+(4) Relation  (parallel) on the set L of lines in the plane.<br>
+(5) Relation | of divisibility on the set N of positive integers.<br>
+Determine which of the relations are reflexive.<br><br>
+The relation (3) is not reflexive since no line is perpendicular to itself. Also (4) is not reflexive since no line
+is parallel to itself. The other relations are reflexive; that is, x ≤ x for every x ∈ Z, A ⊆ A for any set A ∈ C,
+and n | n for every positive integer n ∈ N.<br><br>
+<h3>Symmetric and Antisymmetric Relations</h3>
+Arelation R on a set A is symmetric if whenever aRb then bRa, that is, if whenever (a, b) ∈ R then (b, a) ∈ R.<br>
+Thus R is not symmetric if there exists a, b ∈ A such that (a, b) ∈ R but (b, a) / ∈ R.<br><br>
+<h3>EXAMPLE</h3>
+(a) Determine which of the relations in Example 2.5 are symmetric.<br>
+R1 is not symmetric since (1, 2) ∈ R1 but (2, 1) /∈ R1. R3 is not symmetric since (1, 3) ∈ R3 but (3, 1) /∈ R3.
+The other relations are symmetric.<br>
+(b) Determine which of the relations in Example 2.6 are symmetric.<br>
+The relation ⊥ is symmetric since if line a is perpendicular to line b then b is perpendicular to a. Also,  is
+symmetric since if line a is parallel to line b then b is parallel to line a. The other relations are not symmetric.<br><br>
+<u>For example:</u><br>
+3 ≤ 4 but 4 ≤ 3; {1, 2} ⊆ {1, 2, 3} but {1, 2, 3} ⊆ {1, 2}; and 2 | 6 but 6 | 2.<br>
+A relation R on a set A is antisymmetric if whenever aRb and bRa then a = b, that is, if a = b and aRb then bRa.<br>
+Thus R is not antisymmetric if there exist distinct elements a and b in A such that aRb and bRa.<br><br>
+<h3>EXAMPLE</h3>
+(a) Determine which of the relations in Example 2.5 are antisymmetric.<br>
+R2 is not antisymmetric since (1, 2) and (2, 1) belong to R2, but 1 = 2. Similarly, the universal relation R3
+is not antisymmetric. All the other relations are antisymmetric.<br>
+(b) Determine which of the relations in Example 2.6 are antisymmetric.<br>
+The relation≤is antisymmetric since whenever a ≤ b and b ≤ a then a = b. Set inclusion⊆is antisymmetric
+since whenever A ⊆ B and B ⊆ A then A = B. Also, divisibility on N is antisymmetric since whenever
+m| n and n |m then m = n. (Note that divisibility on Z is not antisymmetric since 3|−3 and −3 | 3 but
+3 = −3.) The relations ⊥ and  are not antisymmetric.<br><br>
+<b<Remark:</b>The properties of being symmetric and being antisymmetric are not negatives of each other. For example,
+the relation R = {(1, 3), (3, 1), (2, 3)} is neither symmetric nor antisymmetric. On the other hand, the relation R= {(1, 1), (2, 2)} is both symmetric and antisymmetric.<br><br>
+<h3>Transitive Relations</h3>
+A relation R on a set A is transitive if whenever aRb and bRc then aRc, that is, if whenever (a, b), (b, c) ∈ R<br>
+then (a, c) ∈ R. Thus R is not transitive if there exist a, b, c ∈ R such that (a, b), (b, c) ∈ R but (a, c) / ∈ R.<br><br>
+
+<h3>CLOSURE PROPERTIES</h3>
+Consider a given set A and the collection of all relations on A. Let P be a property of such relations, such as
+being symmetric or being transitive. A relation with property P will be called a P-relation. The P-closure of an
+arbitrary relation R on A, written P(R), is a P-relation such that<br>
+R ⊆ P(R) ⊆ S<br>
+for every P-relation S containing R.We will write<br>
+reflexive(R), symmetric(R), and transitive(R)<br>
+for the reflexive, symmetric, and transitive closures of R.<br><br>
+
+<h3>Reflexive and Symmetric Closures</h3>
+The next theorem tells us how to obtain easily the reflexive and symmetric closures of a relation. Here
+A = {(a, a) | a ∈ A} is the diagonal or equality relation on A.<br><br>
+<h3>Theorem :</h3> Let R be a relation on a set A. Then:<br>
+(i) R ∪ A is the reflexive closure of R.<br>
+(ii) R ∪ R<sup>−1</sup> is the symmetric closure of R.<br>
+In other words, reflexive(R) is obtained by simply adding to R those elements (a, a) in the diagonal which do not
+already belong to R, and symmetric(R) is obtained by adding to R all pairs (b, a) whenever (a, b) belongs to R.<br><br>
+<h3>EXAMPLE</h3> Consider the relationR = {(1, 1), (1, 3), (2, 4), (3, 1), (3, 3), (4, 3)} on the setA = {1, 2, 3, 4}.
+Then<br>
+reflexive(R) = R ∪ {(2, 2), (4, 4)} and symmetric(R) = R ∪ {(4, 2), (3, 4)}<br><br>
+<h3>Transitive Closure</h3>
+Let R be a relation on a set A. Recall that R2 = R◦R and Rn = Rn−1◦R.We define<br>
+R
+∗ =
+∞
+i=1
+Ri<br>
+This gives us the following theorem:<br>
+<h3>Theorem:</h3> Let R be a relation on a set A with n elements. Then<br>
+transitive (R) = R ∪ R2 ∪ . . . ∪ Rn<br><br>
+<h3>EXAMPLE </h3> Consider the relation R = {(1, 2), (2, 3), (3, 3)} on A = {1, 2, 3}. Then:<br>
+R2 = R◦R = {(1, 3), (2, 3), (3, 3)} and R3 = R2◦R = {(1, 3), (2, 3), (3, 3)}<br>
+Accordingly,<br>
+transitive (R) = {(1, 2), (2, 3), (3, 3), (1, 3)}<br><br>
+<h3>EQUIVALENCE RELATIONS</h3>
+Consider a nonempty set S. A relation R on S is an equivalence relation if R is reflexive, symmetric, and
+transitive. That is, R is an equivalence relation on S if it has the following three properties:<br>
+(1) For every a ∈ S, aRa. (2) If aRb, then bRa. (3) If aRb and bRc, then aRc.<br><br>
+The general idea behind an equivalence relation is that it is a classification of objects which are in some way
+“alike.” In fact, the relation “=” of equality on any set S is an equivalence relation; that is:<br>
+(1) a = a for every a ∈ S. (2) If a = b, then b = a. (3) If a = b, b = c, then a = c.<br>
+Other equivalence relations follow.<br><br>
+<h3>EXAMPLE</h3>
+(a) Let L be the set of lines and let T be the set of triangles in the Euclidean plane.<br>
+&nbsp&nbsp(i) The relation “is parallel to or identical to” is an equivalence relation on L.<br>
+&nbsp&nbsp(ii) The relations of congruence and similarity are equivalence relations on T.<br>
+(b) The relation ⊆ of set inclusion is not an equivalence relation. It is reflexive and transitive, but it is not
+symmetric since A ⊆ B does not imply B ⊆ A.<br>
+(c) Let m be a fixed positive integer. Two integers a and b are said to be congruent modulo m, written
+a ≡ b (mod m)<br>
+if m divides a − b. For example, for the modulus m = 4, we have<br>
+11 ≡ 3 (mod 4) and 22 ≡ 6 (mod 4)<br>
+since 4 divides 11−3 = 8 and 4 divides 22−6 = 16. This relation of congruence modulo m is an important
+equivalence relation.<br><br>
+<h3>Equivalence Relations and Partitions</h3>
+This subsection explores the relationship between equivalence relations and partitions on a non-empty set S.<br>
+Recall first that a partition P of S is a collection {Ai} of nonempty subsets of S with the following two properties:<br>
+(1) Each a ∈ S belongs to some Ai .<br>
+(2) If Ai = Aj then Ai ∩ Aj = ∅.<br>
+In other words, a partition P of S is a subdivision of S into disjoint nonempty sets.<br>
+Suppose R is an equivalence relation on a set S. For each a ∈ S, let [a] denote the set of elements of S to
+which a is related under R; that is:<br>
+[a] = {x | (a, x) ∈ R}<br>
+We call [a] the equivalence class of a in S; any b ∈ [a] is called a representative of the equivalence class.
+The collection of all equivalence classes of elements of S under an equivalence relation R is denoted by S/R,
+that is,<br>
+S/R = {[a] | a ∈ S}<br>
+It is called the quotient set of S by R. The fundamental property of a quotient set is contained in the following
+theorem.<br><br>
+<h3>Theorem :</h3> Let R be an equivalence relation on a set S. Then S/R is a partition of S. Specifically:<br>
+(i) For each a in S, we have a ∈ [a].<br>
+(ii) [a] = [b] if and only if (a, b) ∈ R.<br>
+(iii) If [a] = [b], then [a] and [b] are disjoint.<br>
+Conversely, given a partition {Ai } of the set S, there is an equivalence relation R on S such that the sets Ai are
+the equivalence classes.<br>
+
+<h3>EXAMPLE</h3>
+(a) Consider the relation R = {(1, 1), (1, 2), (2, 1), (2, 2), (3, 3)} on S = {1, 2, 3}.<br>
+One can show that R is reflexive, symmetric, and transitive, that is, that R is an equivalence relation. Also:<br>
+[1] = {1, 2}, [2] = {1, 2}, [3] = {3}<br>
+Observe that [1] = [2] and that S/R = {[1], [3]} is a partition of S. One can choose either {1, 3} or {2, 3} as
+a set of representatives of the equivalence classes.<br>
+(b) Let R5 be the relation of congruence modulo 5 on the set Z of integers denoted by<br>
+x ≡ y (mod 5)<br>
+This means that the difference x −y is divisible by 5. Then R5 is an equivalence relation on Z. The quotient
+set Z/R5 contains the following five equivalence classes:<br><br>
+A0 = {. . . ,−10,−5, 0, 5, 10, . . .}<br>
+A1 = {. . . ,−9,−4, 1, 6, 11, . . .}<br>
+A2 = {. . . ,−8,−3, 2, 7, 12, . . .}<br>
+A3 = {. . . ,−7,−2, 3, 8, 13, . . .}<br>
+A4 = {. . . ,−6,−1, 4, 9, 14, . . .}<br>
+Any integer x, uniquely expressed in the form x = 5q +r where r lies in [0,5), is a member of the equivalence
+class Ar , where r is the remainder.As expected, Z is the disjoint union of equivalence classes A1,A2,A3,A4.<br>
+Usually one chooses {0, 1, 2, 3, 4} or {−2,−1, 0, 1, 2} as a set of representatives of the equivalence classes.<br><br>
+<h3>PARTIAL ORDERING RELATIONS</h3>
+Arelation R on a set S is called a partial ordering or a partial order of S if R is reflexive, antisymmetric, and
+transitive. A set S together with a partial ordering R is called a partially ordered set or poset. 
+<h3>EXAMPLE</h3>
+(a) The relation ⊆ of set inclusion is a partial ordering on any collection of sets since set inclusion has the three
+desired properties. That is,<br>
+(1) A ⊆ A for any set A.<br>
+(2) If A ⊆ B and B ⊆ A, then A = B.<br>
+(3) If A ⊆ B and B ⊆ C, then A ⊆ C.<br>
+(b) The relation ≤ on the set R of real numbers is reflexive, antisymmetric, and transitive. Thus ≤ is a partial
+ordering on R.<br>
+(c) The relation “a divides b,” written a | b, is a partial ordering on the set N of positive integers. However, “a
+divides b” is not a partial ordering on the set Z of integers since a | b and b | a need not imply a = b. For
+example, 3|−3 and −3 | 3 but 3 = −3.<br>
+
+
+<h1>FUNCTIONS</h1>
+<h3>INTRODUCTION</h3>
+<p>Suppose that to each element of a set A we assign a unique element of a set B; the collection of such
+assignments is called a function from A into B. The set A is called the domain of the function, and the set B is
+called the target set or codomain.<br>
+Functions are ordinarily denoted by symbols. For example, let f denote a function from A into B. Then we
+write<br>
+f: A → B<br>
+which is read: “f is a function from A into B,” or “f takes (or maps) A into B.” If a ∈ A, then f (a) (read: “f of a”)
+denotes the unique element of B which f assigns to a; it is called the image of a under f, or the value of f at a.<br><br>
+The set of all image values is called the range or image of f. The image of f : A → B is denoted by Ran(f ),<br>
+Im(f ) or f (A).<br>
+Frequently, a function can be expressed by means of a mathematical formula. For example, consider the
+function which sends each real number into its square.We may describe this function by writing<br>
+f (x) = x<sup>2</sup><br><br>
+In the first notation, x is called a variable and the letter f denotes the function. In the second notation, the barred
+arrow →is read “goes into.” In the last notation, x is called the independent variable and y is called the dependent
+variable since the value of y will depend on the value of x.<br><br>
+<b>Remark:</b> Whenever a function is given by a formula in terms of a variable x, we assume, unless it is otherwise
+stated, that the domain of the function is R (or the largest subset of R for which the formula has meaning) and
+the codomain is R.<br><br>
+
+
+fig 3-1
+
+
+<h3>EXAMPLE</h3>
+(a) Consider the function f (x) = x3, i.e., f assigns to each real number its cube. Then the image of 2 is 8, and
+so we may write f (2) = 8.<br>
+(b) Figure 3-1 defines a function f from A = {a, b, c, d} into B = {r, s, t , u} in the obvious way. Here
+f (a) = s, f (b) = u, f (c) = r, f (d) = s<br>
+The image of f is the set of image values, {r, s, u}. Note that t does not belong to the image of f because t is
+not the image of any element under f.<br>
+(c) Let A be any set. The function from A into A which assigns to each element in A the element itself is called
+the identity function on A and it is usually denoted by 1A, or simply 1. In other words, for every a ∈ A,
+1A(a) = a.<br>
+(d) Suppose S is a subset of A, that is, suppose S ⊆ A. The inclusion map or embedding of S into A, denoted by
+i: S → A is the function such that, for every x ∈ S,
+i(x) = x<br>
+The restriction of any function f: A → B, denoted by f |S is the function from S into B such that, for any x ∈ S,
+f |S(x) = f (x)<br><br>
+
+<h3>Composition Function</h3>
+Consider functions f: A → B and g: B → C; that is, where the codomain of f is the domain of g. Then we
+may define a new function from A to C, called the composition of f and g and written g◦f , as follows:<br>
+(g◦f )(a) ≡ g(f (a))<br>
+That is, we find the image of a under f and then find the image of f (a) under g. This definition is not really
+new. If we view f and g as relations, then this function is the same as the composition of f and g as relations except that here we use the functional notation g◦f for the composition of f and g instead of the
+notation f ◦g which was used for relations.<br>
+Consider any function f: A → B. Then<br>
+f ◦1A = f and 1B◦f = f<br>
+where 1A and 1B are the identity functions on A and B, respectively.<br><br>
+<h3>CLASSIFICATION OF FUNCTIONS</h3>
+ <h3>ONE-TO-ONE, ONTO, AND INVERTIBLE FUNCTIONS</h3>
+A function f : A → B is said to be one-to-one (written 1-1) if different elements in the domain A have
+distinct images.<br>	.
+A function f: A → B is said to be an onto function if each element of B is the image of some element of A.<br>
+In other words, f : A → B is onto if the image of f is the entire codomain, i.e., if f (A) = B. In such a case we
+say that f is a function from A onto B or that f maps A onto B.<br>
+A function f: A → B is invertible if its inverse relation f<sup>−1</sup> is a function from B to A. In general, the inverse
+relation f<sup>−1</sup> may not be a function. The following theorem gives simple criteria which tells us when it is.<br><br>
+<h3>Theorem :</h3> A function f: A → B is invertible if and only if f is both one-to-one and onto.<br>
+If f : A → B is one-to-one and onto, then f is called a one-to-one correspondence between A and B. This
+terminology comes from the fact that each element of A will then correspond to a unique element of B and vice
+versa.<br><br>
+Some texts use the terms injective for a one-to-one function, surjective for an onto function, and bijective for
+a one-to-one correspondence.<br><br>
+<h3>EXAMPLE</h3> Consider the functions f1: A → B, f2: B → C, f3: C → D and f4: D → E defined by the
+diagram of Fig. 3-3. Now f1 is one-to-one since no element of B is the image of more than one element of A.<br>
+Similarly, f2 is one-to-one. However, neither f3 nor f4 is one-to-one since f3(r) = f3(u) and f4(v) = f4(w)<br>
+
+
+Fig. 3-3
+
+
+As far as being onto is concerned, f2 and f3 are both onto functions since every element of C is the image
+under f2 of some element of B and every element of D is the image under f3 of some element of C, f2(B) = C
+and f3(C) = D. On the other hand, f1 is not onto since 3 ∈ B is not the image under f4 of any element of A.
+and f4 is not onto since x ∈ E is not the image under f4 of any element of D.<br>
+Thus f1 is one-to-one but not onto, f3 is onto but not one-to-one and f4 is neither one-to-one nor onto.
+However, f2 is both one-to-one and onto, i.e., is a one-to-one correspondence between A and B. Hence f2 is
+invertible and f<sup>−1</sup><sub>2</sub> is a function from C to B.<br><br>
+<h3>EXAMPLE </h3> Consider the following four functions from R into R:<br>
+f1(x) = x2, f2(x) = 2x, f3(x) = x3 − 2x2 − 5x + 6, f4(x) = x3<br>
+The graphs of these functions appear in Fig. 3-4. Observe that there are horizontal lines which intersect the graph
+of f1 twice and there are horizontal lines which do not intersect the graph of f1 at all; hence f1 is neither oneto-
+one nor onto. Similarly, f2 is one-to-one but not onto, f3 is onto but not one-to-one and f4 is both one-to-one
+and onto. The inverse of f4 is the cube root function.<br><br>
+
+<h3>RECURSIVELY DEFINED FUNCTIONS</h3>
+A function is said to be recursively defined if the function definition refers to itself. In order for the definition
+not to be circular, the function definition must have the following two properties:<br>
+(1) There must be certain arguments, called base values, for which the function does not refer to itself.<br>
+(2) Each time the function does refer to itself, the argument of the function must be closer to a base value.<br>
+A recursive function with these two properties is said to be well-defined.<br>
+The following examples should help clarify these ideas.<br><br>
+<b>Factorial Function</b><br>
+The product of the positive integers from 1 to n, inclusive, is called “n factorial” and is usually denoted by n!.<br>
+That is,<br>
+n! = n(n − 1)(n − 2) · · · 3 · 2 · 1<br>
+It is also convenient to define 0! = 1, so that the function is defined for all nonnegative integers. Thus:<br>
+0! = 1, 1! = 1, 2! = 2 · 1 = 2, 3! = 3 · 2 · 1 = 6, 4! = 4 · 3 · 2 · 1 = 24<br>
+5! = 5 · 4 · 3 · 2 · 1 = 120, 6! = 6 · 5 · 4 · 3 · 2 · 1 = 720<br>
+And so on. Observe that<br>
+5! = 5 · 4! = 5 · 24 = 120 and 6! = 6 · 5! = 6 · 120 = 720<br>
+This is true for every positive integer n; that is,<br>
+n! = n · (n − 1)!<br>
+Accordingly, the factorial function may also be defined as follows:<br><br>
+<b>Definition (Factorial Function):</b><br>
+(a) If n = 0, then n! = 1.<br>
+(b) If n > 0, then n! = n · (n − 1)!<br>
+Observe that the above definition of n! is recursive, since it refers to itself when it uses (n − 1)!. However:<br>
+(1) The value of n! is explicitly given when n = 0 (thus 0 is a base value).<br>
+(2) The value of n! for arbitrary n is defined in terms of a smaller value of n which is closer to the base
+value 0.<br>
+Accordingly, the definition is not circular, or, in other words, the function is well-defined.<br><br>
+<h3>EXAMPLE </h3>figure shows the nine steps to calculate 4! using the recursive definition. Specifically:<br>
+<b>Step 1.</b> This defines 4! in terms of 3!, so we must postpone evaluating 4! until we evaluate 3. This postponement
+is indicated by indenting the next step.<br>
+<b>Step 2.</b> Here 3! is defined in terms of 2!, so we must postpone evaluating 3! until we evaluate 2!.<br>
+<b>Step 3.</b> This defines 2! in terms of 1!.<br>
+<b>Step 4.</b> This defines 1! in terms of 0!.<br>
+<b>Step 5.</b> This step can explicitly evaluate 0!, since 0 is the base value of the recursive definition.<br>
+<b>Steps 6 to 9.</b>We backtrack, using 0! to find 1!, using 1! to find 2!, using 2! to find 3!, and finally using 3! to
+find 4!. This backtracking is indicated by the “reverse” indention.<br><br>
+Observe that we backtrack in the reverse order of the original postponed evaluations.<br>
+
+
+Fig. 3-6
+
+
+
+<h4>Level Numbers</h4>
+Let P be a procedure or recursive formula which is used to evaluate f (X) where f is a recursive function
+and X is the input.We associate a level number with each execution of P as follows. The original execution of P
+is assigned level 1; and each time P is executed because of a recursive call, its level is one more than the level
+of the execution that made the recursive call. The depth of recursion in evaluating f (X) refers to the maximum
+level number of P during its execution.<br><br>
+Consider, for example, the evaluation of 4! Example 3.8, which uses the recursive formula n! = n(n − 1)!.<br><br>
+<b>Step 1</b> belongs to level 1 since it is the first execution of the formula. Thus:<br>
+<b>Step 2</b> belongs to level 2; Step 3 to level 3, . . . ; Step 5 to level 5.<br>
+On the other hand, Step 6 belongs to level 4 since it is the result of a return from level 5. In other words, Step 6
+and Step 4 belong to the same level of execution. Similarly,<br>
+Step 7 belongs to level 3; Step 8 to level 2; and Step 9 to level 1.<br>
+Accordingly, in evaluating 4!, the depth of the recursion is 5.<br><br>
+
+<h4>Fibonacci Sequence</h4>
+The celebrated Fibonacci sequence (usually denoted by F0, F1, F2, . . .) is as follows:<br>
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, . . .<br>
+That is, F0 = 0 and F1 = 1 and each succeeding term is the sum of the two preceding terms. For example, the
+next two terms of the sequence are<br>
+34 + 55 = 89 and 55 + 89 = 144<br>
+A formal definition of this function follows:<br>
+<b>Definition (Fibonacci Sequence):</b>
+(a) If n = 0, or n = 1, then Fn = n.<br>
+(b) If n > 1, then Fn = Fn−2 + Fn−1.<br>
+This is another example of a recursive definition, since the definition refers to itself when it uses Fn−2 and
+Fn−1 However:<br>
+(1) The base values are 0 and 1.<br>
+(2) The value of Fn is defined in terms of smaller values of n which are closer to the base values.<br>
+Accordingly, this function is well-defined.<br></p>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</article>
+
+<footer>Copyright &copy; kiet.edu</br>
+<a href="aboutus.html"target="_blank" style="color:white">Developers</a>: Neeraj Maurya,Archy Mathur,Ashi Anand & Paras Verma
+</footer>
+
+</div>
+
+</body>
+</html>
+
